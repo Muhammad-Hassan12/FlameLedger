@@ -18,7 +18,7 @@ First incomplete acceptance gate is **M1 independent source review**. Engineerin
 - Untouched source-run tree digest: `9236a4ab816b21dfd57222c59b1ab9c1742f216af798ef38a02f94c120d136dc` ([intake artifact](artifacts/intake.json)). The upload is a directory, not an archive; no archive digest is invented.
 - Tuned text model fingerprint: `85ff90ad56da284b380951290c079f53b0d4140f17eabca5612ad934042d6ab4` ([export report](build/model-text-export-report.json)).
 - Active final data identity: `evidence-0bba52783537175d`.
-- Active local bundle: `build/releases/20261115-final`; manifest SHA-256 `1a26394d0c4b2a92d8b5549ce2c90b72fa4ccf4f6d62eff725f43e76508c87af`. All 67 bound files pass verification. The ignored `.env` selects this bundle and `hybrid` mode. All Gemini/VPS credential slots remain blank. Prior local builds remain separate.
+- Active local/VPS data release: `evidence-0bba52783537175d`. All 67 bound release files pass `verify_release`. Committed `.env.example` keeps all Gemini/VPS credential slots blank; on the VPS, ignored `/home/owais/NASA_Space_App/shared/flameledger.env` selects `current` (`releases/20261115-submission`), `hybrid` mode, and `GEMINI_MODEL="gemini-3.1-flash-lite"`. Prior builds remain separate.
 - Deployment archive: [flameledger-20261115-final.tar.gz](build/dist/flameledger-20261115-final.tar.gz), `630,465,466` bytes; SHA-256 `9160152aa2cf67303817275a2392be1c950ccea876025b87ace85b3471f3611f`. Streaming inspection confirmed 68 regular files, matching manifest, no escaping/link entries and no credentials. Base-reference weights are excluded.
 - Reference base: `google/embeddinggemma-2@f9972ac22e696a105c482202646979e33e4b5a1e`, recovered from the supplied model-card revision comment. Downloaded weight SHA-256 matches upstream `197a32965d4b1105faf060417baa899e193fb73cd401f42ec9295234d5553d79`. Base text export fingerprint `be34e3d0b64d7393e0ca384749a06c882794346f807295ff7d2ae60518d4b022`; its separate 517-row matrix SHA-256 is `2e6b2d8ae53bbee95436e03199c22d4a442541dcd78872b8140ed352b7aeb481`. It is used only for offline evaluation.
 - Index: 517 float32 × 768 rows; ordered-ID digest `66a20b7c9e0f363703eeae219690cfd85f6aabddea6cfa55794a394f0ab651b5`; vector SHA-256 `dc45f8d3421901cf05c7bc0aa59c0a1b07a78c1074c6bc6ff865d9f052285a98`. Build time `615.805 s`.
@@ -42,7 +42,16 @@ First incomplete acceptance gate is **M1 independent source review**. Engineerin
 
 ## Reproduce and inspect
 
-The actual shared VPS deployment is documented in [deploy/VPS.md](deploy/VPS.md). Its isolated runtime uses `/home/owais/NASA_Space_App/.pm2`, one Python worker and two encoder threads; the root PM2 daemon and existing Nginx configuration were not changed. Production mode is `hybrid`, dense retrieval and the live encoder both report ready; Gemini fields remain empty and briefing uses the evidence template.
+The actual shared VPS deployment is documented in [deploy/VPS.md](deploy/VPS.md). Its isolated runtime uses `/home/owais/NASA_Space_App/.pm2`, one Python worker, two encoder threads, and `--proxy-headers --forwarded-allow-ips=127.0.0.1` for Nginx reverse proxying; the root PM2 daemon and existing Nginx configuration were not changed. Production mode is `hybrid`, dense retrieval and the live encoder both report ready, `shared/flameledger.env` configures `gemini-3.1-flash-lite`, `/api/readyz` reports `"briefing": "gemini_configured"`, and live `POST /api/brief` verifies `generated_unreviewed` and `cached_generated_unreviewed` on both `lunar` and `iss` presets (retaining template fallback on failure). DNS for `flameledger.agenticerastudio.tech` points to `169.58.54.125`, awaiting `root` Nginx/Certbot HTTPS setup.
+
+## Team
+
+1. Syed Muhammad Hassan
+2. Owais Fayyaz
+3. Harmain Kashif
+4. Asiya Irfan
+5. Zuljalal
+6. Abdul Mannan Fazlani
 
 - Linux tests: **37 passed**, one upstream warning, in 2.41 seconds ([output](artifacts/vps-pytest.txt)). All 718 staged project files and all 10 model files matched their local SHA-256 values before the separately recorded handoff-document updates ([copy verification](artifacts/vps-project-upload-verification.json)). Windows venv/caches were excluded; the Linux venv was rebuilt and `pip check` passed.
 - VPS four-client mixed load: scenario p95 `0.159 s`, search p95 `0.523 s`, first custom query `0.535 s` using the tuned encoder; evidence-template briefing p95 `0.135 s`. Six busy requests deliberately used BM25 fallback ([API report](artifacts/vps-api-final.json)).

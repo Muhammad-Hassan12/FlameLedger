@@ -1,10 +1,21 @@
 # FlameLedger
 
-An evidence research console for NASA's Flame in Freefall challenge, implemented from [the supplied plan](<FlameLedger_Implementation_Plan (1).md>). A scenario finds relevant experiments, shows condition differences and missing fields, opens source records, compares two observations and exports the ledger. The application works with an empty Gemini key.
+An evidence research console for NASA's **Flame in Freefall** challenge, implemented from [the supplied plan](<FlameLedger_Implementation_Plan (1).md>). Given a proposed cabin environment, FlameLedger ranks relevant NASA/NIST combustion experiments, explains condition differences and missing fields, opens source records with PDF locators, compares two runs side-by-side, and exports a reproducible CSV ledger. The application works cleanly with an empty Gemini key via its deterministic evidence-only fallback.
 
-Python 3.12, FastAPI, SQLite, NumPy and a static HTML/CSS/JavaScript frontend. The provided fine-tuned EmbeddingGemma 2 checkpoint is exported locally; no retraining or replacement encoder is used. There is no Node build dependency or database server.
+- **Repository:** https://github.com/Muhammad-Hassan12/FlameLedger
+- **Deployed VPS endpoint:** http://169.58.54.125:8097 (isolated PM2 daemon on port `8097`; DNS for `flameledger.agenticerastudio.tech` points to `169.58.54.125`, awaiting administrator Nginx/Certbot HTTPS setup).
+- **License:** [MIT License](LICENSE)
 
-The deployed application is **http://169.58.54.125:8097**, installed at `/home/owais/NASA_Space_App` with an isolated PM2 daemon. See [VPS operations](deploy/VPS.md) for service commands and [STATUS.md](STATUS.md) for measured validation and remaining review gates. Existing VPS applications and Nginx configuration were preserved. Direct IP access currently uses HTTP.
+## Team
+
+1. Syed Muhammad Hassan
+2. Owais Fayyaz
+3. Harmain Kashif
+4. Asiya Irfan
+5. Zuljalal
+6. Abdul Mannan Fazlani
+
+Python 3.12, FastAPI, SQLite, NumPy and a static HTML/CSS/JavaScript frontend. The provided fine-tuned EmbeddingGemma 2 checkpoint is exported locally; no retraining or replacement encoder is used. There is no Node build dependency or separate database server. See [VPS operations](deploy/VPS.md) for service commands and [STATUS.md](STATUS.md) for measured validation and remaining review gates. Existing VPS applications and Nginx configuration are preserved.
 
 ## Local start
 
@@ -56,7 +67,7 @@ An explicit lexical-only release can be built with `assemble_release --mode bm25
 | `hybrid` | One CPU text encoder, one bounded in-flight encode, exact normalized cosine and positive-score BM25 with RRF. A busy or slow encoder falls back to lexical retrieval. |
 | `bm25` | Lexical retrieval only. A query with no matching tokens returns no scored passages. |
 
-The supplied local `.env` selects `build/releases/20261115-final` and live `hybrid` after the measured CPU smoke checks. The VPS environment example starts in `cached_bm25` until actual host budgets pass. Under a burst of fresh queries, the bounded encoder intentionally returns BM25 for busy requests; the response reports that mode.
+`.env.example` provides blank default configuration slots (`cached_bm25` and evidence-only fallback) for local clones. On the deployed VPS, `/home/owais/NASA_Space_App/shared/flameledger.env` (excluded by `.gitignore`) configures live `hybrid` mode, `FLAMELEDGER_RELEASE_DIR=/home/owais/NASA_Space_App/current` (`releases/20261115-submission`), `GEMINI_API_KEY`, and `GEMINI_MODEL=gemini-3.1-flash-lite`. Under a burst of fresh queries, the bounded encoder intentionally falls back to BM25 for busy requests; the response reports the mode actually used.
 
 Applicability ranking is deterministic and independent of LLM or embedding inference. Each request reports the retrieval mode actually used. Corrupt evidence prevents readiness; a dense-only integrity failure disables dense retrieval while preserving evidence and lexical access.
 
@@ -84,4 +95,4 @@ The ready deployment archive is [build/dist/flameledger-20261115-final.tar.gz](b
 
 Source-checked rows are an inspectable preview. Independent human verification is pending until a reviewer and date are recorded in curated rows. Default coverage counts only human-verified physical runs; the optional source-checked coverage grid is explicitly labeled. Aggregate observations never inflate run counts. Follow [the source review checklist](docs/SOURCE_REVIEW.md) before judging.
 
-See [STATUS.md](STATUS.md) for the current milestone state, measured results and missing acceptance inputs; [deployment instructions](deploy/README.md) for Linux VPS staging and rollback; [research notes](docs/RESEARCH_NOTES.md) for primary documentation and the event-rule recheck; and [artwork disclosure](docs/ART_DISCLOSURE.md) for the original decorative asset and generation prompt.
+See [STATUS.md](STATUS.md) for the current milestone state, measured results and missing acceptance inputs; [deployment instructions](deploy/README.md) and [VPS operations](deploy/VPS.md) for Linux deployment and rollback; [research notes](docs/RESEARCH_NOTES.md) for primary documentation and the event-rule recheck; [artwork disclosure](docs/ART_DISCLOSURE.md) for the original decorative asset and generation prompt; and [LICENSE](LICENSE) for open-source licensing and upstream data/model notices.
