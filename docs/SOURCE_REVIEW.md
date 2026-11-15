@@ -1,0 +1,31 @@
+# Source review and evidence handoff
+
+The development corpus contains 27 curated run or observation records and 31 source-linked passages across Saffire, LUCI, BASS-II, SAME/SAME-R detector studies, FLEX, and a lunar-gravity laboratory protocol. These are public NASA/NIST sources, not fixtures. The supplied 486-passage literature archive remains a separately labeled document-context baseline.
+
+All curated rows are `source_checked`, meaning the coding agent located the stated facts in the cited source during development. **No independent human review has been performed.** Do not promote these rows to `human_verified` without a named reviewer, date, and inspection of the actual cited span. The default verified coverage excludes them; the development preview labels its broader scope explicitly.
+
+PDF page locators count from the first PDF page, starting at 1. They may differ from the printed page number. Source file SHA-256 digests and retrieval dates are in [sources.json](../data/manifests/sources.json). Raw files are preserved in `data/raw/` and excluded from Git. Curated values and native units are in [evidence.json](../data/curated/evidence.json). The curation script in that directory reproduces those two JSON files from the preserved source files.
+
+| Source / rows | Locator to inspect | Review focus |
+| --- | --- | --- |
+| Saffire I-1, II-5, II-6, III-1, IV-1, V-2 | NTRS 20210011521, PDF page 8, Table 2; IV/V gas basis also Table 1 on PDF page 3 | Check sample, flow, oxygen, pressure, sample width/length, duct height, steady size, and maximum size. The first four rows retain an unspecified oxygen basis because Table 2 alone says percent. They remain incomplete for a gas-basis-sensitive match. |
+| Saffire VI-2, VI-3, VI-4 | NTRS 20240007488, PDF page 11, executed matrix; geometry on PDF page 12; VI-3 flow changes on PDF page 17 | VI-2 is 31.0 mol% oxygen, 54.1 kPa, concurrent 20 cm/s. VI-3 is 30.3 mol%, 54.6 kPa; VI-4 is 28.8 mol%, 55.2 kPa. Verify that later flow phases have not inherited initial gas values. Report is preliminary. |
+| LUCI fabric and PMMA rod | NTRS 20250010653, PDF pages 4 and 12 for setup, 19 for fabric flame-base rate, 21 for PMMA flame-tip rate | These are different endpoint definitions, despite both using mm/s. Fabric base rate is 0.92 mm/s; PMMA tip rate is 1.5 mm/s. Centrifugal lunar-gravity simulation introduces Coriolis effects. The source's qualitative normal pressure is not converted into a fabricated measured pressure. Oxygen changes during the burn. |
+| BASS-II B1, B10, B11, B12, B13, B14 | NTRS 20210011385, PDF page 111, printed page 103, Appendix A / Table A.1 | Check the **calibrated** oxygen columns against the separate raw sensor columns. B1 calibrated initial is 22.2 vol%, whereas its raw sensor value is 20.6 vol%. Fan potentiometer settings are not assigned cm/s. Per-row absolute pressure is absent and remains null. |
+| SAME detector aggregates | NIST May 2018 news report and linked detector publication, DOI 10.1016/j.firesaf.2018.04.004 | Kapton and Teflon small-particle response differs from the larger-particle materials. These are material-level aggregates across several heating/flow/aging conditions, not three identified physical runs. No absolute detection probability or per-run atmosphere is inferred. |
+| FLEX-002, 003, 005, 006 | NTRS 20150023456, PDF page 26, printed page 20, Table IX; definitions PDF page 25 | Use actual detailed pressure in mmHg and measured initial diameter. They differ from nominal values in Table I. Recorded visible extinction diameters are 0.94, 0.92, 0.81, and 1.53 mm respectively. Preserve the `Extinction` test-end label. |
+| FLEX-035, 036 | Same report, PDF page 27, Table IX | 035 is heptane, 768.1 mmHg, 21% oxygen and 3.34 mm visible extinction diameter. 036 is methanol, 539 mmHg, 20% oxygen and 1.67 mm visible extinction diameter. Table IV gives a different nominal oxygen value for 036; actual Table IX composition is used. |
+| Lunar laboratory protocol | NTRS 20250002114, PDF pages 6–7 | This is explicitly aggregate **nominal protocol context**. The study targets 56.5 kPa / 8.2 psia; Glenn used a 20.4 RPM centrifuge and a 5.2-second drop to produce nominal one-sixth-g radial acceleration. No material pass/fail outcome, measured flow speed, oxygen threshold, or physical run ID is assigned. |
+
+## Preset checks
+
+- **Illustrative lunar exploration case:** the FM2 poster, NTRS 20240015307 PDF page 1, explicitly gives the planned 34% oxygen / 8.2 psia atmosphere. The interface rounds the converted pressure to approximately 56.5 kPa and uses approximately 0.16 g as a lunar-regime reference. Airflow is unspecified. FM2 is design context, not an executed lunar burn.
+- **ISS-like baseline:** the FLEX report, Section 4.1 on PDF page 15 and Table I on PDF page 16, documents nominal cabin air at oxygen mole fraction 0.21 and 1.0 atm. The interface uses approximately 101.3 kPa and the orbital microgravity regime. Individual runs keep their detailed recorded pressures. Airflow remains unspecified.
+
+## Missing inputs and scope limits
+
+The October 28 source package was not supplied. No PSI raw-data archive has been ingested. PSI-98, PSI-101, and PSI-69 are catalog references identified in the plan; linked public reports and the detector publication support the workflow. Catalog links are labeled as such and are not represented as imported raw datasets. Confirm their exact relationship to the event's package before submission.
+
+The small curated slice is not a complete test inventory and cannot establish absence of experiments outside the indexed sources. Empty coverage means no qualifying run in this release and filter scope. Aggregate observations and different phases of one run must not inflate physical-run counts. Visible-flame extinction in a droplet test does not establish cabin fire suppression, complete chemical extinction, or material acceptance.
+
+To complete the independent review, a teammate should open each row's source drawer, reproduce the stated values from the locator above, check original units and phase association, and add their reviewer identity and date only after checking the source. Rebuild and verify the release after any correction or promotion. The second-person review and hosted VPS performance remain distinct acceptance steps.

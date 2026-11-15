@@ -1,0 +1,34 @@
+[Unit]
+Description=FlameLedger evidence API
+After=network.target
+
+[Service]
+Type=simple
+User=flameledger
+Group=flameledger
+WorkingDirectory=/opt/flameledger/current
+EnvironmentFile=/etc/flameledger.env
+Environment=HF_HUB_OFFLINE=1
+Environment=TRANSFORMERS_OFFLINE=1
+Environment=TOKENIZERS_PARALLELISM=false
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/flameledger/venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --workers 1 --no-proxy-headers --limit-concurrency 64 --timeout-keep-alive 5
+Restart=on-failure
+RestartSec=5
+TimeoutStartSec=180
+TimeoutStopSec=30
+MemoryAccounting=true
+MemoryMax=2800M
+TasksMax=64
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/opt/flameledger
+ReadWritePaths=/var/cache/flameledger
+UMask=0077
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

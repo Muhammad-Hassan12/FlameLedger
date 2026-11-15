@@ -1,0 +1,71 @@
+# Virtual environments & Python caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+.eggs/
+
+# Environment variables, secrets & certificates
+.env
+.env.*
+!.env.example
+*.env
+!deploy/flameledger.env.example
+/shared/
+*.pem
+*.key
+*.crt
+*.p12
+
+# VPS runtime, PM2 state, logs & deployment symlinks
+/.pm2/
+/logs/
+*.log
+/releases/
+/uploads/
+/current
+/current.next
+/previous
+
+# Build outputs, generated assets & local verification artifacts
+build/
+dist/
+frontend/out/
+artifacts/
+
+# Large raw sources, model weights & binary outputs
+data/raw/
+NASA_Flame_In_Freefall_Final/
+*.tar.gz
+*.zip
+*.sqlite
+*.sqlite3
+*.db
+*.npy
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.webm
+
+# Node / Editor / OS files
+node_modules/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+desktop.ini

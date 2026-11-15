@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0A0F1B">
+  <meta name="description" content="Trace NASA combustion evidence to its source. Compare cabin conditions, inspect research gaps, and export a reproducible evidence ledger.">
+  <title>FlameLedger — combustion evidence, in context</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#evidence">Skip to evidence</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="brand" aria-label="FlameLedger home"><span class="brand-mark" aria-hidden="true"><i></i></span><span>Flame<span class="brand-light">Ledger</span></span></a>
+    <span class="header-divider" aria-hidden="true"></span>
+    <label class="mission-picker"><span class="sr-only">Cabin scenario</span><select id="preset"><option value="lunar">Lunar exploration</option><option value="iss">ISS-like cabin</option><option value="custom">Custom environment</option></select></label>
+    <nav aria-label="Main"><a href="#evidence" class="active">Evidence</a><a href="#compare">Compare</a><a href="#coverage">Coverage</a><button type="button" class="nav-button" id="methods-open">Methods <span aria-hidden="true">↗</span></button></nav>
+    <span class="header-tag"><span class="status-dot"></span>Research console</span>
+  </div>
+</header>
+<main>
+  <section class="mission-overview" aria-labelledby="page-title">
+    <div class="mission-copy">
+      <p class="eyebrow"><span class="tiny-cross" aria-hidden="true">+</span> NASA PUBLIC RESEARCH <span class="eyebrow-separator">/</span> FLAME IN FREEFALL</p>
+      <h1 id="page-title">Combustion evidence.<br><span>Put in context.</span></h1>
+      <p class="intro">Explore the experiments behind a cabin environment.<br class="desktop-break"> See what matches, what differs, and what remains unknown.</p>
+      <div class="mission-status"><span class="status-dot amber"></span><span id="release-status">Loading the evidence release…</span></div>
+    </div>
+    <div class="chamber-panel">
+      <div class="panel-ruler"><span>ENVIRONMENT / <span id="scene-label">LUNAR</span></span><span class="mono">SIM · 01</span></div>
+      <div class="chamber-scene" id="chamber-scene" aria-hidden="true"><img id="chamber-art" src="/assets/chamber.webp" alt="" width="256" height="144" fetchpriority="high"><span class="sprite-flame"></span><span class="scene-cross top-left">+</span><span class="scene-cross bottom-right">+</span></div>
+      <div class="scene-readout"><span><i class="cyan-square"></i>Illustrative chamber</span><span>DECORATIVE ART</span></div>
+    </div>
+  </section>
+
+  <div id="global-error" class="error-banner" role="alert" hidden><span></span><button id="retry" type="button">Retry</button></div>
+
+  <div class="workbench">
+    <aside class="scenario-panel panel" aria-labelledby="scenario-title">
+      <div class="section-heading"><span class="section-index">01</span><h2 id="scenario-title">Cabin environment</h2><span class="corner-mark" aria-hidden="true">⌁</span></div>
+      <form id="scenario-form">
+        <p id="preset-description" class="muted small">Illustrative NASA exploration case</p>
+        <div class="field-pair">
+          <label class="field-label" for="oxygen">Oxygen concentration<div class="input-unit"><input id="oxygen" name="oxygen_pct" type="number" min="0" max="100" step="0.1" value="34" inputmode="decimal"><span>% O₂</span></div></label>
+          <label class="field-label" for="pressure">Absolute pressure<div class="input-unit"><input id="pressure" name="pressure_kpa" type="number" min="0.1" max="300" step="0.01" value="56.54" inputmode="decimal"><span>kPa</span></div></label>
+        </div>
+        <div class="field-pair">
+          <label class="field-label" for="gravity">Gravity<div class="input-unit"><input id="gravity" name="g_level" type="number" min="0" max="2" step="0.01" value="0.16" inputmode="decimal"><span>g</span></div></label>
+          <label class="field-label" for="airflow">Airflow <span class="optional">optional</span><div class="input-unit"><input id="airflow" name="flow_cm_s" type="number" min="0" max="200" step="0.1" placeholder="Unspecified" inputmode="decimal"><span>cm/s</span></div></label>
+        </div>
+        <label class="field-label" for="direction">Flow direction<select id="direction"><option value="">Unspecified</option><option value="concurrent">Concurrent</option><option value="opposed">Opposed</option><option value="quiescent">Quiescent</option></select></label>
+        <div class="form-divider"></div>
+        <label class="field-label" for="material">Material or fuel<select id="material"><option value="all">All indexed materials</option></select></label>
+        <label class="field-label" for="endpoint">Reported endpoint<select id="endpoint"><option value="">All reported endpoints</option></select></label>
+        <label class="field-label" for="regime-filter">Evidence gravity filter<select id="regime-filter"><option value="">All gravity methods</option></select></label>
+        <label class="field-label" for="question">Research question<textarea id="question" rows="3" maxlength="1000">Which indexed experiments inform this cabin environment?</textarea></label>
+        <button class="button primary" type="submit" id="run-scenario">Find relevant evidence <span aria-hidden="true">→</span></button>
+        <p class="form-note">Search tolerances are illustrative. A condition match is a research aid, not a material qualification.</p>
+      </form>
+      <details class="preset-citation"><summary>Scenario source &amp; assumptions</summary><p id="preset-assumptions"></p><a id="preset-source" target="_blank" rel="noopener noreferrer">Open source <span aria-hidden="true">↗</span></a></details>
+    </aside>
+
+    <section class="evidence-panel" id="evidence" aria-labelledby="evidence-title">
+      <div class="evidence-topline"><div class="section-heading"><span class="section-index">02</span><h2 id="evidence-title">Evidence ledger</h2></div><button class="button secondary compact" id="export" type="button" disabled><span aria-hidden="true">↓</span> Export CSV</button></div>
+      <div class="lane-tabs" role="group" aria-label="Research lane"><button type="button" data-lane="all" aria-pressed="true">All evidence</button><button type="button" data-lane="prevention" aria-pressed="false"><span class="lane-dot prevention"></span>Prevention</button><button type="button" data-lane="detection" aria-pressed="false"><span class="lane-dot detection"></span>Detection</button><button type="button" data-lane="suppression" aria-pressed="false"><span class="lane-dot suppression"></span>Suppression</button></div>
+      <div class="ledger-summary" id="ledger-summary" aria-live="polite"><span>Preparing the source-backed ledger…</span></div>
+      <div class="active-scenario" id="active-scenario"></div>
+      <p class="review-notice" id="review-notice" hidden><span aria-hidden="true">◇</span> Source-checked preview. Independent human verification is pending; verified coverage counts only reviewed physical runs.</p>
+      <div id="run-list" class="run-list" aria-busy="true"><div class="loading-placeholder"><span class="pixel-loader" aria-hidden="true"></span><p>Loading indexed evidence</p><p class="small muted">Conditions and source locators will appear here.</p></div></div>
+      <p id="result-status" class="result-status" role="status"></p>
+      <details class="literature-search"><summary>Search the literature baseline <span class="muted">↗</span></summary><form id="search-form"><label for="literature-query" class="sr-only">Literature question</label><input id="literature-query" maxlength="1000" placeholder="e.g. droplet extinction in microgravity" required><button class="button secondary compact" type="submit">Search</button></form><p class="small muted">Abstracts and unlocated legacy passages are document context. They do not count as physical runs.</p><div id="search-results" aria-live="polite"></div></details>
+    </section>
+  </div>
+
+  <section class="compare-section panel" id="compare" aria-labelledby="compare-title">
+    <div class="compare-header"><div><div class="section-heading"><span class="section-index">03</span><h2 id="compare-title">Different analogs. Different limits.</h2></div><p class="section-subtitle">Pinned walkthrough examples · each answers a different part of the scenario.</p></div><button type="button" class="button secondary compact" id="export-comparison" disabled>↓ Export pair CSV</button></div>
+    <div class="compare-selectors"><label><span id="left-pin" class="eyebrow cyan">ATMOSPHERE ANALOG</span><select id="compare-left" aria-label="First comparison run"></select></label><span class="compare-versus" aria-hidden="true">↔</span><label><span id="right-pin" class="eyebrow amber-text">GRAVITY ANALOG</span><select id="compare-right" aria-label="Second comparison run"></select></label></div>
+    <div id="comparison" aria-live="polite"><p class="muted">Loading comparison sources…</p></div>
+  </section>
+
+  <div class="analysis-grid">
+    <section class="coverage-panel panel" id="coverage" aria-labelledby="coverage-title"><div class="section-heading"><span class="section-index">04</span><h2 id="coverage-title">Where the evidence reaches</h2></div><p class="section-subtitle">Oxygen × absolute pressure · unique physical runs</p><label class="coverage-mode"><input type="checkbox" id="preview-coverage">Include source-checked preview <span class="muted">(review pending)</span></label><div id="coverage-grid" class="coverage-container" aria-label="Coverage matrix"></div><div class="coverage-key"><span><i class="coverage-key-cell"></i>No indexed run</span><span><i class="coverage-key-cell populated"></i>Indexed run</span></div><div id="coverage-detail" class="coverage-detail" aria-live="polite">Select a cell to inspect the evidence behind it.</div><button id="clear-cell" type="button" class="text-button" hidden>Clear coverage selection ×</button><p id="coverage-scope" class="small muted"></p></section>
+    <section class="briefing-panel panel" aria-labelledby="briefing-title"><div class="briefing-header"><div class="section-heading"><span class="section-index">05</span><h2 id="briefing-title">Research briefing</h2></div><button type="button" id="refresh-brief" class="text-button" aria-label="Refresh briefing">↻</button></div><div class="briefing-status"><span class="outline-tag" id="briefing-mode">EVIDENCE ONLY</span><span id="retrieval-mode" class="small mono muted"></span></div><div id="briefing" class="briefing-content" aria-live="polite"><p class="muted">A briefing will appear after the evidence loads.</p></div><div class="research-gaps"><p class="eyebrow amber-text">DETERMINISTIC RESEARCH GAPS</p><div id="research-gaps"></div></div></section>
+  </div>
+  <footer><div><span class="footer-mark" aria-hidden="true">▧</span> FlameLedger <span class="muted">/</span> Trace the evidence. Keep the limits.</div><div class="footer-links"><button class="text-button" id="disclosure-open" type="button">Sources &amp; AI disclosure</button><span id="release-id" class="mono"></span></div><p>Independent research interface using public NASA and NIST sources. Not a NASA product or a fire-safety decision system.</p></footer>
+</main>
+
+<dialog id="source-drawer" class="source-drawer" aria-labelledby="source-title"><div class="drawer-head"><span class="eyebrow">EVIDENCE RECORD</span><button class="icon-button" type="button" id="source-close" aria-label="Close source record">×</button></div><div id="source-content"><h2 id="source-title">Source record</h2></div></dialog>
+<dialog id="methods-dialog" class="methods-dialog" aria-labelledby="methods-title"><div class="drawer-head"><span class="eyebrow">METHODS &amp; SCOPE</span><button class="icon-button" id="methods-close" type="button" aria-label="Close methods">×</button></div><h2 id="methods-title">Read the match. Check the source.</h2><p>Runs are filtered by research lane, endpoint and the chosen gravity scope. Exact material matches are grouped ahead of general context. Each record is compared against one coherent condition phase.</p><dl class="methods-list"><div><dt>Match</dt><dd>Every specified condition axis and requested flow-direction check passes the illustrative tolerances.</dd></div><div><dt>Analog</dt><dd>The required conditions are reported, but at least one differs from the scenario or requested protocol.</dd></div><div><dt>Incomplete</dt><dd>At least one required condition is missing or cannot be converted. A known matching field never fills an unknown one.</dd></div></dl><h3>Illustrative search tolerances</h3><p class="mono tolerance-line">O₂ ±2 pp · pressure ±5 kPa · gravity ±0.03 g · flow ±5 cm/s</p><p>These are search controls, never engineering thresholds. A documented microgravity regime may be mapped to 0 g for search, without claiming a measured residual acceleration. Oxygen values require a documented mole or volume basis.</p><h3>Coverage and comparisons</h3><p>Coverage uses 5 percentage-point oxygen bins and 10 kPa pressure bins. Each physical run counts at most once in a cell. Aggregate or unidentified observations are excluded. The default grid counts independently human-verified records; the optional source-checked preview is explicitly unreviewed.</p><p>Numerical outcome differences are calculated only when endpoint, definition, units, phase and protocol agree. Differences in material, geometry, gravity or flow remain visible as comparison limits.</p><h3>Source and model disclosure</h3><p>Curated public reports supplement the uploaded literature baseline. No October 28 PSI dataset package was supplied. PSI catalog entries are identified separately from downloaded report evidence. Abstracts are document context and never counted as executed runs.</p><p>The existing fine-tuned EmbeddingGemma 2 checkpoint supplies retrieval where its verified index is available. Actual retrieval mode is shown per request. Saved training scores use synthetic and unreviewed teacher questions; independent human evaluation is pending.</p><p>Gemini, when configured, drafts cited scope notes. Structural checks cannot establish scientific correctness; generated claims require human review. Without a valid response, a deterministic evidence-only briefing remains available.</p><p>Development used AI for code, source extraction assistance and original decorative chamber art. The art depicts a fictional chamber. It is not an image of a NASA experiment. All scientific values link to source records.</p></dialog>
+</body>
+</html>

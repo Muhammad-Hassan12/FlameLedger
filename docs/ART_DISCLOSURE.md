@@ -1,0 +1,11 @@
+# Decorative artwork disclosure
+
+`frontend/assets/chamber.png` is original AI-generated decorative artwork made with the built-in image generation tool through the `imagegen` skill on 15 November 2026. It depicts a fictional spacecraft combustion chamber. It does not depict or document a NASA experiment and contains no NASA insignia. Evidence, chart labels, conditions and controls are separate HTML content.
+
+The generated PNG was inspected and resampled with Windows System.Drawing using nearest-neighbor interpolation to 256 × 144 pixels. No generative edit, experiment photograph, or external stock asset was used. The original generated image remains outside the release in the tool's generated-image directory. The PNG is 53,596 bytes. The installed `cwebp` encoder produced an exact lossless WebP with `cwebp -lossless -exact frontend/assets/chamber.png -o frontend/assets/chamber.webp`: 31,904 bytes. The smaller WebP is the production asset, below the plan's 80 KiB first-screen artwork budget. Both workspace artifacts are preserved.
+
+Built-in generation prompt:
+
+> Use case: stylized-concept. Asset type: one original compact decorative pixel-art illustration for a scientific evidence dashboard named FlameLedger. Primary request: a restrained, expertly composed 16-bit-inspired side-cutaway spacecraft combustion chamber vignette. Wide 16:9 composition, ideally a true 256 by 144 logical pixel grid, clearly visible square hard pixel edges, no antialiasing, no blur, no gradients, limited flat palette. Dark near-black space #0A0F1B and navy #121D2E laboratory interior. Center a simple glass combustion chamber containing a tiny amber #FFB963 and ember #FF765F flame. Cyan #65D8E7 instrument indicator blocks and outlined rails; one small orbital porthole. Simple strong silhouette, breathing room, precise understated industrial laboratory visual. Entire composition should read clearly at 256x144 pixels. This is fictional decorative art, not a diagram or depiction of any real NASA experiment. Text: none. Avoid all writing, numbers, logos, NASA insignia, badges, watermarks, photo realism, glow, ornamental detail and complicated machinery. Opaque background.
+
+The current event's AI-disclosure requirements must be checked before submission. Include this artwork and Codex-assisted implementation in the submission disclosure.

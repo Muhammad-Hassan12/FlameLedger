@@ -1,0 +1,4 @@
+-r requirements-ml.txt
+# Builder only: the original multimodal processor needs this CPU package.
+# Install it from https://download.pytorch.org/whl/cpu, never the CUDA wheel.
+torchvision==0.26.0+cpu

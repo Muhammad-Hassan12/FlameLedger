@@ -1,0 +1,2947 @@
+{
+  "schema_version": 1,
+  "investigations": [
+    {
+      "id": "SAFFIRE",
+      "family": "Saffire",
+      "platform": "Orbiting Cygnus spacecraft",
+      "hardware": "Saffire Flow Unit",
+      "fuel_class": "solid",
+      "scope": "Large-scale solid-fuel flame spread in orbital microgravity"
+    },
+    {
+      "id": "LUCI",
+      "family": "LUCI",
+      "platform": "Blue Origin New Shepard rotating sounding rocket",
+      "hardware": "Centrifugal lunar-gravity combustion chamber",
+      "fuel_class": "solid",
+      "scope": "Simulated lunar gravity; air at normal pressure; Coriolis effects apply"
+    },
+    {
+      "id": "BASS-II",
+      "family": "BASS-II",
+      "platform": "International Space Station",
+      "hardware": "Microgravity Science Glovebox small flow duct",
+      "fuel_class": "solid",
+      "scope": "Small solid-fuel flames; oxygen dilution and ventilation control"
+    },
+    {
+      "id": "SAME-R",
+      "family": "SAME / SAME-R",
+      "platform": "International Space Station",
+      "hardware": "Smoke generation and aerosol measurement apparatus",
+      "fuel_class": "detector",
+      "scope": "Material-dependent detector response; aggregate observations are not individually identified runs"
+    },
+    {
+      "id": "FLEX",
+      "family": "FLEX",
+      "platform": "International Space Station",
+      "hardware": "MDCA in the Combustion Integrated Rack",
+      "fuel_class": "droplet",
+      "scope": "Droplet burning and extinction; source matrices distinguish nominal and actual conditions"
+    },
+    {
+      "id": "LUNAR-LAB",
+      "family": "Lunar gravity laboratory",
+      "platform": "NASA Glenn Zero Gravity Facility centrifuge and White Sands terrestrial facility",
+      "hardware": "Drop-tower partial-gravity centrifuge",
+      "fuel_class": "solid",
+      "scope": "Reduced-pressure lunar-gravity ignition/extinction; protocols remain distinct"
+    }
+  ],
+  "runs": [
+    {
+      "id": "SAFFIRE-I-1",
+      "investigation_id": "SAFFIRE",
+      "as_run_id": "I-1",
+      "evidence_type": "run",
+      "physical_run_id": "SAFFIRE-I-1",
+      "lane": "prevention",
+      "material": "SIBAL fabric",
+      "fuel_class": "solid",
+      "geometry": "41 cm wide x 94 cm long; duct height 46 cm",
+      "review_status": "source_checked",
+      "source_id": "SRC-SAFFIRE-I-V",
+      "locator": {
+        "page": 8,
+        "table": "Table 2",
+        "row": "I-1",
+        "label": "Thin-sample test conditions and flame size"
+      },
+      "qualifier": "Source checked during development; independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 21,
+          "oxygen_basis": "unspecified",
+          "pressure_kpa": 100,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": 20,
+          "flow_direction": "concurrent",
+          "protocol": "forced-flow solid-fuel burning",
+          "original": {
+            "oxygen_pct": 21,
+            "pressure_kpa": 100,
+            "flow_cm_s": 20,
+            "duct_height_cm": 46,
+            "sample_width_cm": 41,
+            "sample_length_cm": 94
+          },
+          "qualifier": "As-reported initial conditions; nominal gravity mapped by documented regime.",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "I-1",
+            "label": "Thin-sample test conditions and flame size"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "SAFFIRE-I-1:steady_flame_size",
+          "endpoint": "steady_flame_size",
+          "definition": "Reported steady-state flame size for thin samples (Table 2)",
+          "value": 4,
+          "unit": "cm",
+          "outcome": "",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "I-1",
+            "label": "Thin-sample test conditions and flame size"
+          },
+          "protocol": "source-defined"
+        },
+        {
+          "id": "SAFFIRE-I-1:maximum_flame_size",
+          "endpoint": "maximum_flame_size",
+          "definition": "Reported maximum flame size for thin samples (Table 2)",
+          "value": 6.2,
+          "unit": "cm",
+          "outcome": "",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "I-1",
+            "label": "Thin-sample test conditions and flame size"
+          },
+          "protocol": "source-defined"
+        }
+      ],
+      "passage_ids": [
+        "PASS-SAFFIRE-I-1"
+      ]
+    },
+    {
+      "id": "SAFFIRE-II-5",
+      "investigation_id": "SAFFIRE",
+      "as_run_id": "II-5",
+      "evidence_type": "run",
+      "physical_run_id": "SAFFIRE-II-5",
+      "lane": "prevention",
+      "material": "SIBAL fabric",
+      "fuel_class": "solid",
+      "geometry": "5 cm wide x 30 cm long; duct height 46 cm",
+      "review_status": "source_checked",
+      "source_id": "SRC-SAFFIRE-I-V",
+      "locator": {
+        "page": 8,
+        "table": "Table 2",
+        "row": "II-5",
+        "label": "Thin-sample test conditions and flame size"
+      },
+      "qualifier": "Source checked during development; independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 21,
+          "oxygen_basis": "unspecified",
+          "pressure_kpa": 100,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": 20,
+          "flow_direction": "concurrent",
+          "protocol": "forced-flow solid-fuel burning",
+          "original": {
+            "oxygen_pct": 21,
+            "pressure_kpa": 100,
+            "flow_cm_s": 20,
+            "duct_height_cm": 46,
+            "sample_width_cm": 5,
+            "sample_length_cm": 30
+          },
+          "qualifier": "As-reported initial conditions; nominal gravity mapped by documented regime.",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "II-5",
+            "label": "Thin-sample test conditions and flame size"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "SAFFIRE-II-5:steady_flame_size",
+          "endpoint": "steady_flame_size",
+          "definition": "Reported steady-state flame size for thin samples (Table 2)",
+          "value": 4,
+          "unit": "cm",
+          "outcome": "",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "II-5",
+            "label": "Thin-sample test conditions and flame size"
+          },
+          "protocol": "source-defined"
+        },
+        {
+          "id": "SAFFIRE-II-5:maximum_flame_size",
+          "endpoint": "maximum_flame_size",
+          "definition": "Reported maximum flame size for thin samples (Table 2)",
+          "value": 4,
+          "unit": "cm",
+          "outcome": "",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "II-5",
+            "label": "Thin-sample test conditions and flame size"
+          },
+          "protocol": "source-defined"
+        }
+      ],
+      "passage_ids": [
+        "PASS-SAFFIRE-II-5"
+      ]
+    },
+    {
+      "id": "SAFFIRE-II-6",
+      "investigation_id": "SAFFIRE",
+      "as_run_id": "II-6",
+      "evidence_type": "run",
+      "physical_run_id": "SAFFIRE-II-6",
+      "lane": "prevention",
+      "material": "SIBAL fabric",
+      "fuel_class": "solid",
+      "geometry": "5 cm wide x 30 cm long; duct height 46 cm",
+      "review_status": "source_checked",
+      "source_id": "SRC-SAFFIRE-I-V",
+      "locator": {
+        "page": 8,
+        "table": "Table 2",
+        "row": "II-6",
+        "label": "Thin-sample test conditions and flame size"
+      },
+      "qualifier": "Source checked during development; independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 21,
+          "oxygen_basis": "unspecified",
+          "pressure_kpa": 100,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": 25,
+          "flow_direction": "concurrent",
+          "protocol": "forced-flow solid-fuel burning",
+          "original": {
+            "oxygen_pct": 21,
+            "pressure_kpa": 100,
+            "flow_cm_s": 25,
+            "duct_height_cm": 46,
+            "sample_width_cm": 5,
+            "sample_length_cm": 30
+          },
+          "qualifier": "As-reported initial conditions; nominal gravity mapped by documented regime.",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "II-6",
+            "label": "Thin-sample test conditions and flame size"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "SAFFIRE-II-6:steady_flame_size",
+          "endpoint": "steady_flame_size",
+          "definition": "Reported steady-state flame size for thin samples (Table 2)",
+          "value": 5,
+          "unit": "cm",
+          "outcome": "",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "II-6",
+            "label": "Thin-sample test conditions and flame size"
+          },
+          "protocol": "source-defined"
+        },
+        {
+          "id": "SAFFIRE-II-6:maximum_flame_size",
+          "endpoint": "maximum_flame_size",
+          "definition": "Reported maximum flame size for thin samples (Table 2)",
+          "value": 5,
+          "unit": "cm",
+          "outcome": "",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "II-6",
+            "label": "Thin-sample test conditions and flame size"
+          },
+          "protocol": "source-defined"
+        }
+      ],
+      "passage_ids": [
+        "PASS-SAFFIRE-II-6"
+      ]
+    },
+    {
+      "id": "SAFFIRE-III-1",
+      "investigation_id": "SAFFIRE",
+      "as_run_id": "III-1",
+      "evidence_type": "run",
+      "physical_run_id": "SAFFIRE-III-1",
+      "lane": "prevention",
+      "material": "SIBAL fabric",
+      "fuel_class": "solid",
+      "geometry": "41 cm wide x 94 cm long; duct height 46 cm",
+      "review_status": "source_checked",
+      "source_id": "SRC-SAFFIRE-I-V",
+      "locator": {
+        "page": 8,
+        "table": "Table 2",
+        "row": "III-1",
+        "label": "Thin-sample test conditions and flame size"
+      },
+      "qualifier": "Source checked during development; independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 21,
+          "oxygen_basis": "unspecified",
+          "pressure_kpa": 100,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": 25,
+          "flow_direction": "concurrent",
+          "protocol": "forced-flow solid-fuel burning",
+          "original": {
+            "oxygen_pct": 21,
+            "pressure_kpa": 100,
+            "flow_cm_s": 25,
+            "duct_height_cm": 46,
+            "sample_width_cm": 41,
+            "sample_length_cm": 94
+          },
+          "qualifier": "As-reported initial conditions; nominal gravity mapped by documented regime.",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "III-1",
+            "label": "Thin-sample test conditions and flame size"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "SAFFIRE-III-1:steady_flame_size",
+          "endpoint": "steady_flame_size",
+          "definition": "Reported steady-state flame size for thin samples (Table 2)",
+          "value": 5,
+          "unit": "cm",
+          "outcome": "",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "III-1",
+            "label": "Thin-sample test conditions and flame size"
+          },
+          "protocol": "source-defined"
+        },
+        {
+          "id": "SAFFIRE-III-1:maximum_flame_size",
+          "endpoint": "maximum_flame_size",
+          "definition": "Reported maximum flame size for thin samples (Table 2)",
+          "value": 8.2,
+          "unit": "cm",
+          "outcome": "",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "III-1",
+            "label": "Thin-sample test conditions and flame size"
+          },
+          "protocol": "source-defined"
+        }
+      ],
+      "passage_ids": [
+        "PASS-SAFFIRE-III-1"
+      ]
+    },
+    {
+      "id": "SAFFIRE-IV-1",
+      "investigation_id": "SAFFIRE",
+      "as_run_id": "IV-1",
+      "evidence_type": "run",
+      "physical_run_id": "SAFFIRE-IV-1",
+      "lane": "prevention",
+      "material": "SIBAL fabric",
+      "fuel_class": "solid",
+      "geometry": "41 cm wide x 50 cm long; duct height 30 cm",
+      "review_status": "source_checked",
+      "source_id": "SRC-SAFFIRE-I-V",
+      "locator": {
+        "page": 8,
+        "table": "Table 2",
+        "row": "IV-1",
+        "label": "Thin-sample test conditions and flame size"
+      },
+      "qualifier": "Source checked during development; independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 22,
+          "oxygen_basis": "mole",
+          "pressure_kpa": 100,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": 20,
+          "flow_direction": "concurrent",
+          "protocol": "forced-flow solid-fuel burning",
+          "original": {
+            "oxygen_pct": 22,
+            "pressure_kpa": 100,
+            "flow_cm_s": 20,
+            "duct_height_cm": 30,
+            "sample_width_cm": 41,
+            "sample_length_cm": 50
+          },
+          "qualifier": "As-reported initial conditions; nominal gravity mapped by documented regime.",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "IV-1",
+            "label": "Thin-sample test conditions and flame size"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "SAFFIRE-IV-1:steady_flame_size",
+          "endpoint": "steady_flame_size",
+          "definition": "Reported steady-state flame size for thin samples (Table 2)",
+          "value": 8.5,
+          "unit": "cm",
+          "outcome": "",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "IV-1",
+            "label": "Thin-sample test conditions and flame size"
+          },
+          "protocol": "source-defined"
+        },
+        {
+          "id": "SAFFIRE-IV-1:maximum_flame_size",
+          "endpoint": "maximum_flame_size",
+          "definition": "Reported maximum flame size for thin samples (Table 2)",
+          "value": 11,
+          "unit": "cm",
+          "outcome": "",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "IV-1",
+            "label": "Thin-sample test conditions and flame size"
+          },
+          "protocol": "source-defined"
+        }
+      ],
+      "passage_ids": [
+        "PASS-SAFFIRE-IV-1"
+      ]
+    },
+    {
+      "id": "SAFFIRE-V-2",
+      "investigation_id": "SAFFIRE",
+      "as_run_id": "V-2",
+      "evidence_type": "run",
+      "physical_run_id": "SAFFIRE-V-2",
+      "lane": "prevention",
+      "material": "Cotton jersey",
+      "fuel_class": "solid",
+      "geometry": "41 cm wide x 50 cm long; duct height 30 cm",
+      "review_status": "source_checked",
+      "source_id": "SRC-SAFFIRE-I-V",
+      "locator": {
+        "page": 8,
+        "table": "Table 2",
+        "row": "V-2",
+        "label": "Thin-sample test conditions and flame size"
+      },
+      "qualifier": "Source checked during development; independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 26.2,
+          "oxygen_basis": "mole",
+          "pressure_kpa": 70.7,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": 20,
+          "flow_direction": "concurrent",
+          "protocol": "forced-flow solid-fuel burning",
+          "original": {
+            "oxygen_pct": 26.2,
+            "pressure_kpa": 70.7,
+            "flow_cm_s": 20,
+            "duct_height_cm": 30,
+            "sample_width_cm": 41,
+            "sample_length_cm": 50
+          },
+          "qualifier": "As-reported initial conditions; nominal gravity mapped by documented regime.",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "V-2",
+            "label": "Thin-sample test conditions and flame size"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "SAFFIRE-V-2:steady_flame_size",
+          "endpoint": "steady_flame_size",
+          "definition": "Reported steady-state flame size for thin samples (Table 2)",
+          "value": 10,
+          "unit": "cm",
+          "outcome": "",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "V-2",
+            "label": "Thin-sample test conditions and flame size"
+          },
+          "protocol": "source-defined"
+        },
+        {
+          "id": "SAFFIRE-V-2:maximum_flame_size",
+          "endpoint": "maximum_flame_size",
+          "definition": "Reported maximum flame size for thin samples (Table 2)",
+          "value": 14,
+          "unit": "cm",
+          "outcome": "",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-SAFFIRE-I-V",
+          "locator": {
+            "page": 8,
+            "table": "Table 2",
+            "row": "V-2",
+            "label": "Thin-sample test conditions and flame size"
+          },
+          "protocol": "source-defined"
+        }
+      ],
+      "passage_ids": [
+        "PASS-SAFFIRE-V-2"
+      ]
+    },
+    {
+      "id": "SAFFIRE-VI-2",
+      "investigation_id": "SAFFIRE",
+      "as_run_id": "VI-2",
+      "evidence_type": "run",
+      "physical_run_id": "SAFFIRE-VI-2",
+      "lane": "prevention",
+      "material": "SIBAL fabric",
+      "fuel_class": "solid",
+      "geometry": "41 cm wide x 50 cm long; thin fabric",
+      "review_status": "source_checked",
+      "source_id": "SRC-SAFFIRE-VI",
+      "locator": {
+        "page": 11,
+        "table": "Test Matrix (as executed)",
+        "row": "VI-2",
+        "label": "Executed Saffire VI matrix"
+      },
+      "qualifier": "Preliminary Saffire VI report. Executed matrix, not proposed design conditions. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 31.0,
+          "oxygen_basis": "mole",
+          "pressure_kpa": 54.1,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": 20,
+          "flow_direction": "concurrent",
+          "protocol": "forced-flow solid-fuel burning",
+          "original": {
+            "oxygen": {
+              "value": 31.0,
+              "unit": "mol%"
+            },
+            "pressure": {
+              "value": 54.1,
+              "unit": "kPa absolute"
+            },
+            "flow": {
+              "value": 20,
+              "unit": "cm/s"
+            }
+          },
+          "qualifier": "As-reported initial conditions; nominal gravity mapped by documented regime.",
+          "source_id": "SRC-SAFFIRE-VI",
+          "locator": {
+            "page": 11,
+            "table": "Test Matrix (as executed)",
+            "row": "VI-2",
+            "label": "Executed Saffire VI matrix"
+          }
+        }
+      ],
+      "measurements": [],
+      "passage_ids": [
+        "PASS-SAFFIRE-VI-2"
+      ]
+    },
+    {
+      "id": "SAFFIRE-VI-3",
+      "investigation_id": "SAFFIRE",
+      "as_run_id": "VI-3",
+      "evidence_type": "run",
+      "physical_run_id": "SAFFIRE-VI-3",
+      "lane": "prevention",
+      "material": "PMMA",
+      "fuel_class": "solid",
+      "geometry": "41 cm wide x 18 cm long x 1.0 cm thick; two-sided",
+      "review_status": "source_checked",
+      "source_id": "SRC-SAFFIRE-VI",
+      "locator": {
+        "page": 11,
+        "table": "Test Matrix (as executed)",
+        "row": "VI-3",
+        "label": "Executed Saffire VI matrix"
+      },
+      "qualifier": "Preliminary Saffire VI report. Executed matrix, not proposed design conditions. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 30.3,
+          "oxygen_basis": "mole",
+          "pressure_kpa": 54.6,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": 20,
+          "flow_direction": "concurrent",
+          "protocol": "forced-flow solid-fuel burning",
+          "original": {
+            "oxygen": {
+              "value": 30.3,
+              "unit": "mol%"
+            },
+            "pressure": {
+              "value": 54.6,
+              "unit": "kPa absolute"
+            },
+            "flow": {
+              "value": 20,
+              "unit": "cm/s"
+            }
+          },
+          "qualifier": "As-reported initial conditions; nominal gravity mapped by documented regime.",
+          "source_id": "SRC-SAFFIRE-VI",
+          "locator": {
+            "page": 11,
+            "table": "Test Matrix (as executed)",
+            "row": "VI-3",
+            "label": "Executed Saffire VI matrix"
+          }
+        },
+        {
+          "key": "reduced_flow",
+          "oxygen_pct": null,
+          "oxygen_basis": "mole",
+          "pressure_kpa": null,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": 5,
+          "flow_direction": "concurrent",
+          "protocol": "forced-flow solid-fuel burning",
+          "original": {
+            "oxygen": {
+              "value": null,
+              "unit": "mol%"
+            },
+            "pressure": {
+              "value": null,
+              "unit": "kPa absolute"
+            },
+            "flow": {
+              "value": 5,
+              "unit": "cm/s"
+            }
+          },
+          "qualifier": "Flow reduced at 1120 s; initial gas values are not copied to this phase.",
+          "source_id": "SRC-SAFFIRE-VI",
+          "locator": {
+            "page": 17,
+            "label": "Flow schedule at 1120 s"
+          }
+        },
+        {
+          "key": "flow_off",
+          "oxygen_pct": null,
+          "oxygen_basis": "mole",
+          "pressure_kpa": null,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": 0,
+          "flow_direction": "concurrent",
+          "protocol": "forced-flow solid-fuel burning",
+          "original": {
+            "oxygen": {
+              "value": null,
+              "unit": "mol%"
+            },
+            "pressure": {
+              "value": null,
+              "unit": "kPa absolute"
+            },
+            "flow": {
+              "value": 0,
+              "unit": "cm/s"
+            }
+          },
+          "qualifier": "Duct flow terminated at 1420 s; subsequent gases not transcribed.",
+          "source_id": "SRC-SAFFIRE-VI",
+          "locator": {
+            "page": 17,
+            "label": "Flow schedule at 1420 s"
+          }
+        }
+      ],
+      "measurements": [],
+      "passage_ids": [
+        "PASS-SAFFIRE-VI-3"
+      ]
+    },
+    {
+      "id": "SAFFIRE-VI-4",
+      "investigation_id": "SAFFIRE",
+      "as_run_id": "VI-4",
+      "evidence_type": "run",
+      "physical_run_id": "SAFFIRE-VI-4",
+      "lane": "prevention",
+      "material": "PMMA",
+      "fuel_class": "solid",
+      "geometry": "41 cm wide x 18 cm long x 0.5 cm thick; one-sided",
+      "review_status": "source_checked",
+      "source_id": "SRC-SAFFIRE-VI",
+      "locator": {
+        "page": 11,
+        "table": "Test Matrix (as executed)",
+        "row": "VI-4",
+        "label": "Executed Saffire VI matrix"
+      },
+      "qualifier": "Preliminary Saffire VI report. Executed matrix, not proposed design conditions. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 28.8,
+          "oxygen_basis": "mole",
+          "pressure_kpa": 55.2,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": 20,
+          "flow_direction": "concurrent",
+          "protocol": "forced-flow solid-fuel burning",
+          "original": {
+            "oxygen": {
+              "value": 28.8,
+              "unit": "mol%"
+            },
+            "pressure": {
+              "value": 55.2,
+              "unit": "kPa absolute"
+            },
+            "flow": {
+              "value": 20,
+              "unit": "cm/s"
+            }
+          },
+          "qualifier": "As-reported initial conditions; nominal gravity mapped by documented regime.",
+          "source_id": "SRC-SAFFIRE-VI",
+          "locator": {
+            "page": 11,
+            "table": "Test Matrix (as executed)",
+            "row": "VI-4",
+            "label": "Executed Saffire VI matrix"
+          }
+        }
+      ],
+      "measurements": [],
+      "passage_ids": [
+        "PASS-SAFFIRE-VI-4"
+      ]
+    },
+    {
+      "id": "LUCI-FABRIC",
+      "investigation_id": "LUCI",
+      "as_run_id": "LUCI fabric",
+      "evidence_type": "run",
+      "physical_run_id": "LUCI-FABRIC",
+      "lane": "prevention",
+      "material": "SIBAL fabric",
+      "fuel_class": "solid",
+      "geometry": "5 cm wide x 30 cm long fabric sheet",
+      "review_status": "source_checked",
+      "source_id": "SRC-LUCI",
+      "locator": {
+        "page": 19,
+        "label": "LUCI measured flame propagation"
+      },
+      "qualifier": "Simulated lunar gravity, 11 RPM at 1.22 m effective radius; air at normal pressure. Coriolis effects and oxygen depletion differ from a lunar cabin. Human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": null,
+          "oxygen_basis": "unspecified",
+          "pressure_kpa": null,
+          "g_level": null,
+          "gravity_regime": "lunar",
+          "gravity_method": "centrifugal acceleration on rotating New Shepard; nominal lunar regime",
+          "flow_cm_s": null,
+          "flow_direction": null,
+          "protocol": "See source; no forced-flow speed assigned",
+          "original": {
+            "oxygen": {
+              "value": null,
+              "unit": "% basis not specified"
+            },
+            "pressure": {
+              "value": null,
+              "unit": "kPa absolute"
+            },
+            "flow": {
+              "value": null,
+              "unit": "cm/s"
+            }
+          },
+          "qualifier": "Air at normal pressure; oxygen depleted during burn. Numeric oxygen/pressure/g not assigned from qualitative overview.",
+          "source_id": "SRC-LUCI",
+          "locator": {
+            "page": 12,
+            "label": "Experimental overview; air at normal pressure"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "LUCI-FABRIC:flame_base_spread_rate",
+          "endpoint": "flame_base_spread_rate",
+          "definition": "Linear fit to SIBAL flame-base position",
+          "value": 0.92,
+          "unit": "mm/s",
+          "outcome": "",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-LUCI",
+          "locator": {
+            "page": 19,
+            "label": "LUCI measured flame propagation"
+          },
+          "protocol": "source-defined"
+        }
+      ],
+      "passage_ids": [
+        "PASS-LUCI-FABRIC"
+      ]
+    },
+    {
+      "id": "LUCI-PMMA",
+      "investigation_id": "LUCI",
+      "as_run_id": "LUCI rod",
+      "evidence_type": "run",
+      "physical_run_id": "LUCI-PMMA",
+      "lane": "prevention",
+      "material": "PMMA",
+      "fuel_class": "solid",
+      "geometry": "4 mm diameter acrylic rod",
+      "review_status": "source_checked",
+      "source_id": "SRC-LUCI",
+      "locator": {
+        "page": 21,
+        "label": "LUCI measured flame propagation"
+      },
+      "qualifier": "Simulated lunar gravity, 11 RPM at 1.22 m effective radius; air at normal pressure. Coriolis effects and oxygen depletion differ from a lunar cabin. Human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": null,
+          "oxygen_basis": "unspecified",
+          "pressure_kpa": null,
+          "g_level": null,
+          "gravity_regime": "lunar",
+          "gravity_method": "centrifugal acceleration on rotating New Shepard; nominal lunar regime",
+          "flow_cm_s": null,
+          "flow_direction": null,
+          "protocol": "See source; no forced-flow speed assigned",
+          "original": {
+            "oxygen": {
+              "value": null,
+              "unit": "% basis not specified"
+            },
+            "pressure": {
+              "value": null,
+              "unit": "kPa absolute"
+            },
+            "flow": {
+              "value": null,
+              "unit": "cm/s"
+            }
+          },
+          "qualifier": "Air at normal pressure; oxygen depleted during burn. Numeric oxygen/pressure/g not assigned from qualitative overview.",
+          "source_id": "SRC-LUCI",
+          "locator": {
+            "page": 12,
+            "label": "Experimental overview; air at normal pressure"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "LUCI-PMMA:flame_tip_spread_rate",
+          "endpoint": "flame_tip_spread_rate",
+          "definition": "Approximately linear PMMA flame-tip spread",
+          "value": 1.5,
+          "unit": "mm/s",
+          "outcome": "",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-LUCI",
+          "locator": {
+            "page": 21,
+            "label": "LUCI measured flame propagation"
+          },
+          "protocol": "source-defined"
+        }
+      ],
+      "passage_ids": [
+        "PASS-LUCI-PMMA"
+      ]
+    },
+    {
+      "id": "SAME-KAPTON",
+      "investigation_id": "SAME-R",
+      "as_run_id": null,
+      "evidence_type": "aggregate_observation",
+      "physical_run_id": null,
+      "lane": "detection",
+      "material": "Kapton",
+      "fuel_class": "detector",
+      "geometry": "Oxidative pyrolysis smoke; source aggregates multiple test conditions",
+      "review_status": "source_checked",
+      "source_id": "SRC-NIST-SAME-NEWS",
+      "locator": {
+        "label": "NIST report, material-specific detector observations, May2018"
+      },
+      "qualifier": "Source checked during development; independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": null,
+          "oxygen_basis": "unspecified",
+          "pressure_kpa": null,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": null,
+          "protocol": "See source; no forced-flow speed assigned",
+          "original": {
+            "oxygen": {
+              "value": null,
+              "unit": "% basis not specified"
+            },
+            "pressure": {
+              "value": null,
+              "unit": "kPa absolute"
+            },
+            "flow": {
+              "value": null,
+              "unit": "cm/s"
+            }
+          },
+          "qualifier": "Material-level aggregate; no individual run or environmental setpoint is assigned.",
+          "source_id": "SRC-NIST-SAME-NEWS",
+          "locator": {
+            "label": "NIST report, material-specific detector observations, May2018"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "SAME-KAPTON:smoke_detection_response",
+          "endpoint": "smoke_detection_response",
+          "definition": "ISS light-scattering photoelectric detector material-dependent response",
+          "value": null,
+          "unit": null,
+          "outcome": "The ISS photoelectric detector frequently missed the smaller particles from overheated Kapton.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-NIST-SAME-NEWS",
+          "locator": {
+            "label": "NIST report, material-specific detector observations, May2018"
+          },
+          "protocol": "source-defined"
+        }
+      ],
+      "passage_ids": [
+        "PASS-SAME-KAPTON"
+      ]
+    },
+    {
+      "id": "SAME-TEFLON",
+      "investigation_id": "SAME-R",
+      "as_run_id": null,
+      "evidence_type": "aggregate_observation",
+      "physical_run_id": null,
+      "lane": "detection",
+      "material": "Teflon",
+      "fuel_class": "detector",
+      "geometry": "Oxidative pyrolysis smoke; source aggregates multiple test conditions",
+      "review_status": "source_checked",
+      "source_id": "SRC-NIST-SAME-NEWS",
+      "locator": {
+        "label": "NIST report, material-specific detector observations, May2018"
+      },
+      "qualifier": "Source checked during development; independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": null,
+          "oxygen_basis": "unspecified",
+          "pressure_kpa": null,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": null,
+          "protocol": "See source; no forced-flow speed assigned",
+          "original": {
+            "oxygen": {
+              "value": null,
+              "unit": "% basis not specified"
+            },
+            "pressure": {
+              "value": null,
+              "unit": "kPa absolute"
+            },
+            "flow": {
+              "value": null,
+              "unit": "cm/s"
+            }
+          },
+          "qualifier": "Material-level aggregate; no individual run or environmental setpoint is assigned.",
+          "source_id": "SRC-NIST-SAME-NEWS",
+          "locator": {
+            "label": "NIST report, material-specific detector observations, May2018"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "SAME-TEFLON:smoke_detection_response",
+          "endpoint": "smoke_detection_response",
+          "definition": "ISS light-scattering photoelectric detector material-dependent response",
+          "value": null,
+          "unit": null,
+          "outcome": "The ISS photoelectric detector frequently missed the smaller particles from overheated Teflon.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-NIST-SAME-NEWS",
+          "locator": {
+            "label": "NIST report, material-specific detector observations, May2018"
+          },
+          "protocol": "source-defined"
+        }
+      ],
+      "passage_ids": [
+        "PASS-SAME-TEFLON"
+      ]
+    },
+    {
+      "id": "SAME-LARGE-PARTICLES",
+      "investigation_id": "SAME-R",
+      "as_run_id": null,
+      "evidence_type": "aggregate_observation",
+      "physical_run_id": null,
+      "lane": "detection",
+      "material": "Cellulose / silicone / Pyrell",
+      "fuel_class": "detector",
+      "geometry": "Oxidative pyrolysis smoke; source aggregates multiple test conditions",
+      "review_status": "source_checked",
+      "source_id": "SRC-NIST-SAME-NEWS",
+      "locator": {
+        "label": "NIST report, material-specific detector observations, May2018"
+      },
+      "qualifier": "Source checked during development; independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": null,
+          "oxygen_basis": "unspecified",
+          "pressure_kpa": null,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": null,
+          "protocol": "See source; no forced-flow speed assigned",
+          "original": {
+            "oxygen": {
+              "value": null,
+              "unit": "% basis not specified"
+            },
+            "pressure": {
+              "value": null,
+              "unit": "kPa absolute"
+            },
+            "flow": {
+              "value": null,
+              "unit": "cm/s"
+            }
+          },
+          "qualifier": "Material-level aggregate; no individual run or environmental setpoint is assigned.",
+          "source_id": "SRC-NIST-SAME-NEWS",
+          "locator": {
+            "label": "NIST report, material-specific detector observations, May2018"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "SAME-LARGE-PARTICLES:smoke_detection_response",
+          "endpoint": "smoke_detection_response",
+          "definition": "ISS light-scattering photoelectric detector material-dependent response",
+          "value": null,
+          "unit": null,
+          "outcome": "Larger smoke particles from cellulose, silicone and Pyrell were detected by the ISS light-scattering detector.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-NIST-SAME-NEWS",
+          "locator": {
+            "label": "NIST report, material-specific detector observations, May2018"
+          },
+          "protocol": "source-defined"
+        }
+      ],
+      "passage_ids": [
+        "PASS-SAME-LARGE-PARTICLES"
+      ]
+    },
+    {
+      "id": "BASS-II-B1",
+      "investigation_id": "BASS-II",
+      "as_run_id": "B1",
+      "evidence_type": "run",
+      "physical_run_id": "BASS-II-B1",
+      "lane": "prevention",
+      "material": "PMMA",
+      "fuel_class": "solid",
+      "geometry": "2 cm wide x 100 micrometre film; sample 147",
+      "review_status": "source_checked",
+      "source_id": "SRC-BASS-II",
+      "locator": {
+        "page": 111,
+        "table": "Appendix A, Table A.1",
+        "row": "B1; as-run 7; sample 147",
+        "label": "Bhattacharjee PMMA test matrix; printed page 103"
+      },
+      "qualifier": "Source matrix transcribed with original calibrated and uncalibrated oxygen kept separate. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 22.2,
+          "oxygen_basis": "volume",
+          "pressure_kpa": null,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": "opposed",
+          "protocol": "Opposed spread; integral igniter; flow restrictor 2; fan schedule varies by test",
+          "original": {
+            "as_run_test_number": 7,
+            "test_number": "B1",
+            "sample_number": "147",
+            "calibrated_initial_oxygen_vol_pct": 22.2,
+            "calibrated_final_oxygen_vol_pct": 22.2,
+            "uncalibrated_initial_oxygen_vol_pct": 20.6,
+            "flow_schedule_native": "Air display 5; fan display 62; flow switched off during spread",
+            "flow_restrictor": 2,
+            "igniter": "Integral"
+          },
+          "qualifier": "Calibrated initial oxygen is retained. Per-run absolute pressure and calibrated speed are not provided in this matrix row; changing fan settings are not one fixed condition.",
+          "source_id": "SRC-BASS-II",
+          "locator": {
+            "page": 111,
+            "table": "Appendix A, Table A.1",
+            "row": "B1; as-run 7; sample 147",
+            "label": "Bhattacharjee PMMA test matrix; printed page 103"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "BASS-II-B1:flame_observation",
+          "endpoint": "flame_observation",
+          "definition": "Test observations from the BASS-II Appendix A operator matrix",
+          "value": null,
+          "unit": null,
+          "outcome": "Rapid ignition followed by extinction when flow was switched off; soot and a blue leading edge were noted.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-BASS-II",
+          "locator": {
+            "page": 111,
+            "table": "Appendix A, Table A.1",
+            "row": "B1; as-run 7; sample 147",
+            "label": "Bhattacharjee PMMA test matrix; printed page 103"
+          },
+          "protocol": "Opposed spread; integral igniter; flow restrictor 2; fan schedule varies by test"
+        }
+      ],
+      "passage_ids": [
+        "PASS-BASS-II-B1"
+      ]
+    },
+    {
+      "id": "BASS-II-B10",
+      "investigation_id": "BASS-II",
+      "as_run_id": "B10",
+      "evidence_type": "run",
+      "physical_run_id": "BASS-II-B10",
+      "lane": "prevention",
+      "material": "PMMA",
+      "fuel_class": "solid",
+      "geometry": "1 cm wide x 200 micrometre film; sample 173m",
+      "review_status": "source_checked",
+      "source_id": "SRC-BASS-II",
+      "locator": {
+        "page": 111,
+        "table": "Appendix A, Table A.1",
+        "row": "B10; as-run 62; sample 173m",
+        "label": "Bhattacharjee PMMA test matrix; printed page 103"
+      },
+      "qualifier": "Source matrix transcribed with original calibrated and uncalibrated oxygen kept separate. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 21.0,
+          "oxygen_basis": "volume",
+          "pressure_kpa": null,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": "opposed",
+          "protocol": "Opposed spread; integral igniter; flow restrictor 2; fan schedule varies by test",
+          "original": {
+            "as_run_test_number": 62,
+            "test_number": "B10",
+            "sample_number": "173m",
+            "calibrated_initial_oxygen_vol_pct": 21.0,
+            "calibrated_final_oxygen_vol_pct": 20.8,
+            "uncalibrated_initial_oxygen_vol_pct": 20.1,
+            "flow_schedule_native": "Air display 5, 4, 3, 2, 1; fan settings 1.7 (52), 1.25, 0.9, 0.6, 0.4, 0.35",
+            "flow_restrictor": 2,
+            "igniter": "Integral"
+          },
+          "qualifier": "Calibrated initial oxygen is retained. Per-run absolute pressure and calibrated speed are not provided in this matrix row; changing fan settings are not one fixed condition.",
+          "source_id": "SRC-BASS-II",
+          "locator": {
+            "page": 111,
+            "table": "Appendix A, Table A.1",
+            "row": "B10; as-run 62; sample 173m",
+            "label": "Bhattacharjee PMMA test matrix; printed page 103"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "BASS-II-B10:flame_observation",
+          "endpoint": "flame_observation",
+          "definition": "Test observations from the BASS-II Appendix A operator matrix",
+          "value": null,
+          "unit": null,
+          "outcome": "Steady spread was examined at several flow settings; extinction occurred at fan potentiometer 0.35.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-BASS-II",
+          "locator": {
+            "page": 111,
+            "table": "Appendix A, Table A.1",
+            "row": "B10; as-run 62; sample 173m",
+            "label": "Bhattacharjee PMMA test matrix; printed page 103"
+          },
+          "protocol": "Opposed spread; integral igniter; flow restrictor 2; fan schedule varies by test"
+        }
+      ],
+      "passage_ids": [
+        "PASS-BASS-II-B10"
+      ]
+    },
+    {
+      "id": "BASS-II-B11",
+      "investigation_id": "BASS-II",
+      "as_run_id": "B11",
+      "evidence_type": "run",
+      "physical_run_id": "BASS-II-B11",
+      "lane": "prevention",
+      "material": "PMMA",
+      "fuel_class": "solid",
+      "geometry": "2 cm wide x 200 micrometre film; sample 158m",
+      "review_status": "source_checked",
+      "source_id": "SRC-BASS-II",
+      "locator": {
+        "page": 111,
+        "table": "Appendix A, Table A.1",
+        "row": "B11; as-run 61; sample 158m",
+        "label": "Bhattacharjee PMMA test matrix; printed page 103"
+      },
+      "qualifier": "Source matrix transcribed with original calibrated and uncalibrated oxygen kept separate. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 21.0,
+          "oxygen_basis": "volume",
+          "pressure_kpa": null,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": "opposed",
+          "protocol": "Opposed spread; integral igniter; flow restrictor 2; fan schedule varies by test",
+          "original": {
+            "as_run_test_number": 61,
+            "test_number": "B11",
+            "sample_number": "158m",
+            "calibrated_initial_oxygen_vol_pct": 21.0,
+            "calibrated_final_oxygen_vol_pct": 20.7,
+            "uncalibrated_initial_oxygen_vol_pct": 20.1,
+            "flow_schedule_native": "Air display 5, 3, 1, <1; fan settings 2.5 (59), 1.3, 0.7, 0.5, 0.35",
+            "flow_restrictor": 2,
+            "igniter": "Integral"
+          },
+          "qualifier": "Calibrated initial oxygen is retained. Per-run absolute pressure and calibrated speed are not provided in this matrix row; changing fan settings are not one fixed condition.",
+          "source_id": "SRC-BASS-II",
+          "locator": {
+            "page": 111,
+            "table": "Appendix A, Table A.1",
+            "row": "B11; as-run 61; sample 158m",
+            "label": "Bhattacharjee PMMA test matrix; printed page 103"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "BASS-II-B11:flame_observation",
+          "endpoint": "flame_observation",
+          "definition": "Test observations from the BASS-II Appendix A operator matrix",
+          "value": null,
+          "unit": null,
+          "outcome": "Multiple flow settings were used for steady spread; extinction occurred at potentiometer 0.35.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-BASS-II",
+          "locator": {
+            "page": 111,
+            "table": "Appendix A, Table A.1",
+            "row": "B11; as-run 61; sample 158m",
+            "label": "Bhattacharjee PMMA test matrix; printed page 103"
+          },
+          "protocol": "Opposed spread; integral igniter; flow restrictor 2; fan schedule varies by test"
+        }
+      ],
+      "passage_ids": [
+        "PASS-BASS-II-B11"
+      ]
+    },
+    {
+      "id": "BASS-II-B12",
+      "investigation_id": "BASS-II",
+      "as_run_id": "B12",
+      "evidence_type": "run",
+      "physical_run_id": "BASS-II-B12",
+      "lane": "prevention",
+      "material": "PMMA",
+      "fuel_class": "solid",
+      "geometry": "2 cm wide x 300 micrometre film; sample 160",
+      "review_status": "source_checked",
+      "source_id": "SRC-BASS-II",
+      "locator": {
+        "page": 111,
+        "table": "Appendix A, Table A.1",
+        "row": "B12; as-run 13; sample 160",
+        "label": "Bhattacharjee PMMA test matrix; printed page 103"
+      },
+      "qualifier": "Source matrix transcribed with original calibrated and uncalibrated oxygen kept separate. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 22.2,
+          "oxygen_basis": "volume",
+          "pressure_kpa": null,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": "opposed",
+          "protocol": "Opposed spread; integral igniter; flow restrictor 2; fan schedule varies by test",
+          "original": {
+            "as_run_test_number": 13,
+            "test_number": "B12",
+            "sample_number": "160",
+            "calibrated_initial_oxygen_vol_pct": 22.2,
+            "calibrated_final_oxygen_vol_pct": 22.1,
+            "uncalibrated_initial_oxygen_vol_pct": 20.5,
+            "flow_schedule_native": "Air display 2; fan display 46.5",
+            "flow_restrictor": 2,
+            "igniter": "Integral"
+          },
+          "qualifier": "Calibrated initial oxygen is retained. Per-run absolute pressure and calibrated speed are not provided in this matrix row; changing fan settings are not one fixed condition.",
+          "source_id": "SRC-BASS-II",
+          "locator": {
+            "page": 111,
+            "table": "Appendix A, Table A.1",
+            "row": "B12; as-run 13; sample 160",
+            "label": "Bhattacharjee PMMA test matrix; printed page 103"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "BASS-II-B12:flame_observation",
+          "endpoint": "flame_observation",
+          "definition": "Test observations from the BASS-II Appendix A operator matrix",
+          "value": null,
+          "unit": null,
+          "outcome": "The flame was predominantly blue, with soot noted on the underside.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-BASS-II",
+          "locator": {
+            "page": 111,
+            "table": "Appendix A, Table A.1",
+            "row": "B12; as-run 13; sample 160",
+            "label": "Bhattacharjee PMMA test matrix; printed page 103"
+          },
+          "protocol": "Opposed spread; integral igniter; flow restrictor 2; fan schedule varies by test"
+        }
+      ],
+      "passage_ids": [
+        "PASS-BASS-II-B12"
+      ]
+    },
+    {
+      "id": "BASS-II-B13",
+      "investigation_id": "BASS-II",
+      "as_run_id": "B13",
+      "evidence_type": "run",
+      "physical_run_id": "BASS-II-B13",
+      "lane": "prevention",
+      "material": "PMMA",
+      "fuel_class": "solid",
+      "geometry": "2 cm wide x 400 micrometre film; sample 162m",
+      "review_status": "source_checked",
+      "source_id": "SRC-BASS-II",
+      "locator": {
+        "page": 111,
+        "table": "Appendix A, Table A.1",
+        "row": "B13; as-run 63; sample 162m",
+        "label": "Bhattacharjee PMMA test matrix; printed page 103"
+      },
+      "qualifier": "Source matrix transcribed with original calibrated and uncalibrated oxygen kept separate. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 21.0,
+          "oxygen_basis": "volume",
+          "pressure_kpa": null,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": "opposed",
+          "protocol": "Opposed spread; integral igniter; flow restrictor 2; fan schedule varies by test",
+          "original": {
+            "as_run_test_number": 63,
+            "test_number": "B13",
+            "sample_number": "162m",
+            "calibrated_initial_oxygen_vol_pct": 21.0,
+            "calibrated_final_oxygen_vol_pct": 20.5,
+            "uncalibrated_initial_oxygen_vol_pct": 20.1,
+            "flow_schedule_native": "Air display 10, 5, 4, 3, 2, 1; fan settings 3.5 (68), 1.7, 1.25, 0.9, 0.6, 0.4, 0.35",
+            "flow_restrictor": 2,
+            "igniter": "Integral"
+          },
+          "qualifier": "Calibrated initial oxygen is retained. Per-run absolute pressure and calibrated speed are not provided in this matrix row; changing fan settings are not one fixed condition.",
+          "source_id": "SRC-BASS-II",
+          "locator": {
+            "page": 111,
+            "table": "Appendix A, Table A.1",
+            "row": "B13; as-run 63; sample 162m",
+            "label": "Bhattacharjee PMMA test matrix; printed page 103"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "BASS-II-B13:flame_observation",
+          "endpoint": "flame_observation",
+          "definition": "Test observations from the BASS-II Appendix A operator matrix",
+          "value": null,
+          "unit": null,
+          "outcome": "Steady spread was investigated at multiple flow settings, followed by extinction at potentiometer 0.35.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-BASS-II",
+          "locator": {
+            "page": 111,
+            "table": "Appendix A, Table A.1",
+            "row": "B13; as-run 63; sample 162m",
+            "label": "Bhattacharjee PMMA test matrix; printed page 103"
+          },
+          "protocol": "Opposed spread; integral igniter; flow restrictor 2; fan schedule varies by test"
+        }
+      ],
+      "passage_ids": [
+        "PASS-BASS-II-B13"
+      ]
+    },
+    {
+      "id": "BASS-II-B14",
+      "investigation_id": "BASS-II",
+      "as_run_id": "B14",
+      "evidence_type": "run",
+      "physical_run_id": "BASS-II-B14",
+      "lane": "prevention",
+      "material": "PMMA",
+      "fuel_class": "solid",
+      "geometry": "1 cm wide x 200 micrometre film; sample 174m",
+      "review_status": "source_checked",
+      "source_id": "SRC-BASS-II",
+      "locator": {
+        "page": 111,
+        "table": "Appendix A, Table A.1",
+        "row": "B14; as-run 47; sample 174m",
+        "label": "Bhattacharjee PMMA test matrix; printed page 103"
+      },
+      "qualifier": "Source matrix transcribed with original calibrated and uncalibrated oxygen kept separate. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 15.0,
+          "oxygen_basis": "volume",
+          "pressure_kpa": null,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": "opposed",
+          "protocol": "Opposed spread; integral igniter; flow restrictor 2; fan schedule varies by test",
+          "original": {
+            "as_run_test_number": 47,
+            "test_number": "B14",
+            "sample_number": "174m",
+            "calibrated_initial_oxygen_vol_pct": 15.0,
+            "calibrated_final_oxygen_vol_pct": null,
+            "uncalibrated_initial_oxygen_vol_pct": 14.1,
+            "flow_schedule_native": "Air display 5, 3, 2, extinction; fan display not recorded",
+            "flow_restrictor": 2,
+            "igniter": "Integral"
+          },
+          "qualifier": "Calibrated initial oxygen is retained. Per-run absolute pressure and calibrated speed are not provided in this matrix row; changing fan settings are not one fixed condition.",
+          "source_id": "SRC-BASS-II",
+          "locator": {
+            "page": 111,
+            "table": "Appendix A, Table A.1",
+            "row": "B14; as-run 47; sample 174m",
+            "label": "Bhattacharjee PMMA test matrix; printed page 103"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "BASS-II-B14:flame_observation",
+          "endpoint": "flame_observation",
+          "definition": "Test observations from the BASS-II Appendix A operator matrix",
+          "value": null,
+          "unit": null,
+          "outcome": "Only brief ignition was observed before the flame extinguished.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-BASS-II",
+          "locator": {
+            "page": 111,
+            "table": "Appendix A, Table A.1",
+            "row": "B14; as-run 47; sample 174m",
+            "label": "Bhattacharjee PMMA test matrix; printed page 103"
+          },
+          "protocol": "Opposed spread; integral igniter; flow restrictor 2; fan schedule varies by test"
+        }
+      ],
+      "passage_ids": [
+        "PASS-BASS-II-B14"
+      ]
+    },
+    {
+      "id": "LUNAR-LAB-PROTOCOL",
+      "investigation_id": "LUNAR-LAB",
+      "as_run_id": null,
+      "evidence_type": "aggregate_observation",
+      "physical_run_id": null,
+      "lane": "prevention",
+      "material": "Solid materials",
+      "fuel_class": "solid",
+      "geometry": "Two offset samples per drop; material and geometry varied across series",
+      "review_status": "source_checked",
+      "source_id": "SRC-LUNAR-LAB",
+      "locator": {
+        "page": 7,
+        "label": "Section B, NASA Glenn partial-gravity testing"
+      },
+      "qualifier": "Nominal low-pressure lunar-gravity protocol. Aggregate context is excluded from physical-run coverage; no material acceptance conclusion is assigned.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": null,
+          "oxygen_basis": "unspecified",
+          "pressure_kpa": 56.5,
+          "g_level": 0.16666666666666666,
+          "gravity_regime": "lunar",
+          "gravity_method": "Drop-tower centrifuge, 20.4 RPM; nominal 1/6-g radial acceleration",
+          "flow_cm_s": null,
+          "flow_direction": null,
+          "protocol": "Oxygen-enhanced ignition before drop; upward spread; buoyancy-driven flow during 5.2-second centrifugal lunar-gravity interval",
+          "original": {
+            "nominal_chamber_pressure": {
+              "value": 56.5,
+              "unit": "kPa",
+              "reported_equivalent": "8.2 psia",
+              "locator": "PDF page 6"
+            },
+            "radial_acceleration": "1/6 g",
+            "rotation": "20.4 RPM",
+            "drop_duration": "5.2 seconds",
+            "target_oxygen": "Varied by material; no value assigned"
+          },
+          "qualifier": "Study-level protocol at the nominal lunar habitat target pressure, not an individually identified physical run. Gas velocity at the flame was not determined.",
+          "source_id": "SRC-LUNAR-LAB",
+          "locator": {
+            "page": 7,
+            "label": "Section B, NASA Glenn partial-gravity testing"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "LUNAR-LAB-PROTOCOL:extinction_protocol",
+          "endpoint": "extinction_protocol",
+          "definition": "Study endpoint is burning status at the end of the 5.2-second drop, distinct from NASA Test 1 burn length",
+          "value": null,
+          "unit": null,
+          "outcome": "The test series used a short-duration extinction criterion; it does not identify a run-level material pass/fail outcome.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-LUNAR-LAB",
+          "locator": {
+            "page": 7,
+            "label": "Section B, NASA Glenn partial-gravity testing"
+          },
+          "protocol": "Oxygen-enhanced ignition before drop; upward spread; buoyancy-driven flow during 5.2-second centrifugal lunar-gravity interval"
+        }
+      ],
+      "passage_ids": [
+        "PASS-LUNAR-LAB-PROTOCOL"
+      ]
+    },
+    {
+      "id": "FLEX-002",
+      "investigation_id": "FLEX",
+      "as_run_id": "FLEX-002",
+      "evidence_type": "run",
+      "physical_run_id": "FLEX-002",
+      "lane": "suppression",
+      "material": "Methanol",
+      "fuel_class": "droplet",
+      "geometry": "Free droplet, measured initial diameter 1.86 mm; no support fiber",
+      "review_status": "source_checked",
+      "source_id": "SRC-FLEX",
+      "locator": {
+        "page": 26,
+        "table": "Appendix A, Table IX",
+        "row": "FLEX-002; 20CAL10",
+        "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+      },
+      "qualifier": "Visible-flame extinction is a droplet-study endpoint. It does not demonstrate cabin fire suppression or material acceptance. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 21,
+          "oxygen_basis": "mole",
+          "pressure_kpa": 101.591659,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": null,
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction",
+          "original": {
+            "FLEX_test": "002",
+            "FLEX_identifier": "20CAL10",
+            "absolute_pressure": {
+              "value": 762,
+              "unit": "mmHg"
+            },
+            "oxygen": {
+              "value": 0.21,
+              "unit": "mole fraction"
+            },
+            "nitrogen": {
+              "value": 0.79,
+              "unit": "mole fraction; rounded table value"
+            },
+            "actual_initial_droplet_diameter": {
+              "value": 1.86,
+              "unit": "mm"
+            },
+            "nominal_matrix_initial_diameter": {
+              "value": 2.0,
+              "unit": "mm"
+            },
+            "nominal_matrix_oxygen_pct": 21,
+            "visible_extinction_diameter": {
+              "value": 0.94,
+              "unit": "mm"
+            },
+            "reported_test_end": "Extinction",
+            "support_fiber": false,
+            "conversion": "1 mmHg = 0.133322387415 kPa"
+          },
+          "qualifier": "Actual Table IX pressure and oxygen composition are used. Initial diameter differs from nominal matrix values. No measured droplet-relative flow speed is assigned.",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 26,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-002; 20CAL10",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "FLEX-002:visible_flame_extinction_diameter",
+          "endpoint": "visible_flame_extinction_diameter",
+          "definition": "Droplet diameter when the visible flame extinguished; Table IX and Appendix A.1 definition",
+          "value": 0.94,
+          "unit": "mm",
+          "outcome": "Visible flame extinction reported; this endpoint does not establish absence of low-temperature combustion.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 26,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-002; 20CAL10",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          },
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction"
+        },
+        {
+          "id": "FLEX-002:burn_duration",
+          "endpoint": "burn_duration",
+          "definition": "Reported burn time in FLEX Table IX",
+          "value": 5,
+          "unit": "s",
+          "outcome": "Table IX test end: Extinction",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 26,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-002; 20CAL10",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          },
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction"
+        }
+      ],
+      "passage_ids": [
+        "PASS-FLEX-002"
+      ]
+    },
+    {
+      "id": "FLEX-003",
+      "investigation_id": "FLEX",
+      "as_run_id": "FLEX-003",
+      "evidence_type": "run",
+      "physical_run_id": "FLEX-003",
+      "lane": "suppression",
+      "material": "Methanol",
+      "fuel_class": "droplet",
+      "geometry": "Free droplet, measured initial diameter 1.61 mm; no support fiber",
+      "review_status": "source_checked",
+      "source_id": "SRC-FLEX",
+      "locator": {
+        "page": 26,
+        "table": "Appendix A, Table IX",
+        "row": "FLEX-003; 20CAL12",
+        "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+      },
+      "qualifier": "Visible-flame extinction is a droplet-study endpoint. It does not demonstrate cabin fire suppression or material acceptance. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 21,
+          "oxygen_basis": "mole",
+          "pressure_kpa": 101.884968,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": null,
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction",
+          "original": {
+            "FLEX_test": "003",
+            "FLEX_identifier": "20CAL12",
+            "absolute_pressure": {
+              "value": 764.2,
+              "unit": "mmHg"
+            },
+            "oxygen": {
+              "value": 0.21,
+              "unit": "mole fraction"
+            },
+            "nitrogen": {
+              "value": 0.79,
+              "unit": "mole fraction; rounded table value"
+            },
+            "actual_initial_droplet_diameter": {
+              "value": 1.61,
+              "unit": "mm"
+            },
+            "nominal_matrix_initial_diameter": {
+              "value": 1.71,
+              "unit": "mm"
+            },
+            "nominal_matrix_oxygen_pct": 21,
+            "visible_extinction_diameter": {
+              "value": 0.92,
+              "unit": "mm"
+            },
+            "reported_test_end": "Extinction",
+            "support_fiber": false,
+            "conversion": "1 mmHg = 0.133322387415 kPa"
+          },
+          "qualifier": "Actual Table IX pressure and oxygen composition are used. Initial diameter differs from nominal matrix values. No measured droplet-relative flow speed is assigned.",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 26,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-003; 20CAL12",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "FLEX-003:visible_flame_extinction_diameter",
+          "endpoint": "visible_flame_extinction_diameter",
+          "definition": "Droplet diameter when the visible flame extinguished; Table IX and Appendix A.1 definition",
+          "value": 0.92,
+          "unit": "mm",
+          "outcome": "Visible flame extinction reported; this endpoint does not establish absence of low-temperature combustion.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 26,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-003; 20CAL12",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          },
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction"
+        },
+        {
+          "id": "FLEX-003:burn_duration",
+          "endpoint": "burn_duration",
+          "definition": "Reported burn time in FLEX Table IX",
+          "value": 3.2,
+          "unit": "s",
+          "outcome": "Table IX test end: Extinction",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 26,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-003; 20CAL12",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          },
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction"
+        }
+      ],
+      "passage_ids": [
+        "PASS-FLEX-003"
+      ]
+    },
+    {
+      "id": "FLEX-005",
+      "investigation_id": "FLEX",
+      "as_run_id": "FLEX-005",
+      "evidence_type": "run",
+      "physical_run_id": "FLEX-005",
+      "lane": "suppression",
+      "material": "Methanol",
+      "fuel_class": "droplet",
+      "geometry": "Free droplet, measured initial diameter 1.92 mm; no support fiber",
+      "review_status": "source_checked",
+      "source_id": "SRC-FLEX",
+      "locator": {
+        "page": 26,
+        "table": "Appendix A, Table IX",
+        "row": "FLEX-005; 30CAL03",
+        "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+      },
+      "qualifier": "Visible-flame extinction is a droplet-study endpoint. It does not demonstrate cabin fire suppression or material acceptance. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 21,
+          "oxygen_basis": "mole",
+          "pressure_kpa": 101.325014,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": null,
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction",
+          "original": {
+            "FLEX_test": "005",
+            "FLEX_identifier": "30CAL03",
+            "absolute_pressure": {
+              "value": 760,
+              "unit": "mmHg"
+            },
+            "oxygen": {
+              "value": 0.21,
+              "unit": "mole fraction"
+            },
+            "nitrogen": {
+              "value": 0.79,
+              "unit": "mole fraction; rounded table value"
+            },
+            "actual_initial_droplet_diameter": {
+              "value": 1.92,
+              "unit": "mm"
+            },
+            "nominal_matrix_initial_diameter": {
+              "value": 1.95,
+              "unit": "mm"
+            },
+            "nominal_matrix_oxygen_pct": 21,
+            "visible_extinction_diameter": {
+              "value": 0.81,
+              "unit": "mm"
+            },
+            "reported_test_end": "Extinction",
+            "support_fiber": false,
+            "conversion": "1 mmHg = 0.133322387415 kPa"
+          },
+          "qualifier": "Actual Table IX pressure and oxygen composition are used. Initial diameter differs from nominal matrix values. No measured droplet-relative flow speed is assigned.",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 26,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-005; 30CAL03",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "FLEX-005:visible_flame_extinction_diameter",
+          "endpoint": "visible_flame_extinction_diameter",
+          "definition": "Droplet diameter when the visible flame extinguished; Table IX and Appendix A.1 definition",
+          "value": 0.81,
+          "unit": "mm",
+          "outcome": "Visible flame extinction reported; this endpoint does not establish absence of low-temperature combustion.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 26,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-005; 30CAL03",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          },
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction"
+        },
+        {
+          "id": "FLEX-005:burn_duration",
+          "endpoint": "burn_duration",
+          "definition": "Reported burn time in FLEX Table IX",
+          "value": 6.34,
+          "unit": "s",
+          "outcome": "Table IX test end: Extinction",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 26,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-005; 30CAL03",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          },
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction"
+        }
+      ],
+      "passage_ids": [
+        "PASS-FLEX-005"
+      ]
+    },
+    {
+      "id": "FLEX-006",
+      "investigation_id": "FLEX",
+      "as_run_id": "FLEX-006",
+      "evidence_type": "run",
+      "physical_run_id": "FLEX-006",
+      "lane": "suppression",
+      "material": "Methanol",
+      "fuel_class": "droplet",
+      "geometry": "Free droplet, measured initial diameter 2.54 mm; no support fiber",
+      "review_status": "source_checked",
+      "source_id": "SRC-FLEX",
+      "locator": {
+        "page": 26,
+        "table": "Appendix A, Table IX",
+        "row": "FLEX-006; 40CAL01",
+        "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+      },
+      "qualifier": "Visible-flame extinction is a droplet-study endpoint. It does not demonstrate cabin fire suppression or material acceptance. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 21,
+          "oxygen_basis": "mole",
+          "pressure_kpa": 101.325014,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": null,
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction",
+          "original": {
+            "FLEX_test": "006",
+            "FLEX_identifier": "40CAL01",
+            "absolute_pressure": {
+              "value": 760,
+              "unit": "mmHg"
+            },
+            "oxygen": {
+              "value": 0.21,
+              "unit": "mole fraction"
+            },
+            "nitrogen": {
+              "value": 0.79,
+              "unit": "mole fraction; rounded table value"
+            },
+            "actual_initial_droplet_diameter": {
+              "value": 2.54,
+              "unit": "mm"
+            },
+            "nominal_matrix_initial_diameter": {
+              "value": 2.9,
+              "unit": "mm"
+            },
+            "nominal_matrix_oxygen_pct": 21,
+            "visible_extinction_diameter": {
+              "value": 1.53,
+              "unit": "mm"
+            },
+            "reported_test_end": "Extinction",
+            "support_fiber": false,
+            "conversion": "1 mmHg = 0.133322387415 kPa"
+          },
+          "qualifier": "Actual Table IX pressure and oxygen composition are used. Initial diameter differs from nominal matrix values. No measured droplet-relative flow speed is assigned.",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 26,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-006; 40CAL01",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "FLEX-006:visible_flame_extinction_diameter",
+          "endpoint": "visible_flame_extinction_diameter",
+          "definition": "Droplet diameter when the visible flame extinguished; Table IX and Appendix A.1 definition",
+          "value": 1.53,
+          "unit": "mm",
+          "outcome": "Visible flame extinction reported; this endpoint does not establish absence of low-temperature combustion.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 26,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-006; 40CAL01",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          },
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction"
+        },
+        {
+          "id": "FLEX-006:burn_duration",
+          "endpoint": "burn_duration",
+          "definition": "Reported burn time in FLEX Table IX",
+          "value": 9.6,
+          "unit": "s",
+          "outcome": "Table IX test end: Extinction",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 26,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-006; 40CAL01",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          },
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction"
+        }
+      ],
+      "passage_ids": [
+        "PASS-FLEX-006"
+      ]
+    },
+    {
+      "id": "FLEX-035",
+      "investigation_id": "FLEX",
+      "as_run_id": "FLEX-035",
+      "evidence_type": "run",
+      "physical_run_id": "FLEX-035",
+      "lane": "suppression",
+      "material": "Heptane",
+      "fuel_class": "droplet",
+      "geometry": "Free droplet, measured initial diameter 3.85 mm; no support fiber",
+      "review_status": "source_checked",
+      "source_id": "SRC-FLEX",
+      "locator": {
+        "page": 27,
+        "table": "Appendix A, Table IX",
+        "row": "FLEX-035; 181F001",
+        "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+      },
+      "qualifier": "Visible-flame extinction is a droplet-study endpoint. It does not demonstrate cabin fire suppression or material acceptance. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 21,
+          "oxygen_basis": "mole",
+          "pressure_kpa": 102.404926,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": null,
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction",
+          "original": {
+            "FLEX_test": "035",
+            "FLEX_identifier": "181F001",
+            "absolute_pressure": {
+              "value": 768.1,
+              "unit": "mmHg"
+            },
+            "oxygen": {
+              "value": 0.21,
+              "unit": "mole fraction"
+            },
+            "nitrogen": {
+              "value": 0.79,
+              "unit": "mole fraction; rounded table value"
+            },
+            "actual_initial_droplet_diameter": {
+              "value": 3.85,
+              "unit": "mm"
+            },
+            "nominal_matrix_initial_diameter": {
+              "value": null,
+              "unit": "mm"
+            },
+            "nominal_matrix_oxygen_pct": null,
+            "visible_extinction_diameter": {
+              "value": 3.34,
+              "unit": "mm"
+            },
+            "reported_test_end": "Extinction",
+            "support_fiber": false,
+            "conversion": "1 mmHg = 0.133322387415 kPa"
+          },
+          "qualifier": "Actual Table IX pressure and oxygen composition are used. Initial diameter differs from nominal matrix values. No measured droplet-relative flow speed is assigned.",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 27,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-035; 181F001",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "FLEX-035:visible_flame_extinction_diameter",
+          "endpoint": "visible_flame_extinction_diameter",
+          "definition": "Droplet diameter when the visible flame extinguished; Table IX and Appendix A.1 definition",
+          "value": 3.34,
+          "unit": "mm",
+          "outcome": "Visible flame extinction reported; this endpoint does not establish absence of low-temperature combustion.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 27,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-035; 181F001",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          },
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction"
+        },
+        {
+          "id": "FLEX-035:burn_duration",
+          "endpoint": "burn_duration",
+          "definition": "Reported burn time in FLEX Table IX",
+          "value": 8.9,
+          "unit": "s",
+          "outcome": "Table IX test end: Extinction",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 27,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-035; 181F001",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          },
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction"
+        }
+      ],
+      "passage_ids": [
+        "PASS-FLEX-035"
+      ]
+    },
+    {
+      "id": "FLEX-036",
+      "investigation_id": "FLEX",
+      "as_run_id": "FLEX-036",
+      "evidence_type": "run",
+      "physical_run_id": "FLEX-036",
+      "lane": "suppression",
+      "material": "Methanol",
+      "fuel_class": "droplet",
+      "geometry": "Free droplet, measured initial diameter 2.4 mm; no support fiber",
+      "review_status": "source_checked",
+      "source_id": "SRC-FLEX",
+      "locator": {
+        "page": 27,
+        "table": "Appendix A, Table IX",
+        "row": "FLEX-036; 190R002",
+        "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+      },
+      "qualifier": "Visible-flame extinction is a droplet-study endpoint. It does not demonstrate cabin fire suppression or material acceptance. Independent human verification pending.",
+      "phases": [
+        {
+          "key": "initial",
+          "oxygen_pct": 20,
+          "oxygen_basis": "mole",
+          "pressure_kpa": 71.860767,
+          "g_level": null,
+          "gravity_regime": "microgravity",
+          "gravity_method": "orbital freefall",
+          "flow_cm_s": null,
+          "flow_direction": null,
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction",
+          "original": {
+            "FLEX_test": "036",
+            "FLEX_identifier": "190R002",
+            "absolute_pressure": {
+              "value": 539,
+              "unit": "mmHg"
+            },
+            "oxygen": {
+              "value": 0.2,
+              "unit": "mole fraction"
+            },
+            "nitrogen": {
+              "value": 0.8,
+              "unit": "mole fraction; rounded table value"
+            },
+            "actual_initial_droplet_diameter": {
+              "value": 2.4,
+              "unit": "mm"
+            },
+            "nominal_matrix_initial_diameter": {
+              "value": 2.45,
+              "unit": "mm"
+            },
+            "nominal_matrix_oxygen_pct": 21,
+            "visible_extinction_diameter": {
+              "value": 1.67,
+              "unit": "mm"
+            },
+            "reported_test_end": "Extinction",
+            "support_fiber": false,
+            "conversion": "1 mmHg = 0.133322387415 kPa"
+          },
+          "qualifier": "Actual Table IX pressure and oxygen composition are used. Initial diameter differs from nominal matrix values. No measured droplet-relative flow speed is assigned.",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 27,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-036; 190R002",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "id": "FLEX-036:visible_flame_extinction_diameter",
+          "endpoint": "visible_flame_extinction_diameter",
+          "definition": "Droplet diameter when the visible flame extinguished; Table IX and Appendix A.1 definition",
+          "value": 1.67,
+          "unit": "mm",
+          "outcome": "Visible flame extinction reported; this endpoint does not establish absence of low-temperature combustion.",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 27,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-036; 190R002",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          },
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction"
+        },
+        {
+          "id": "FLEX-036:burn_duration",
+          "endpoint": "burn_duration",
+          "definition": "Reported burn time in FLEX Table IX",
+          "value": 7.1,
+          "unit": "s",
+          "outcome": "Table IX test end: Extinction",
+          "phase_key": "initial",
+          "verification_status": "source_checked",
+          "source_id": "SRC-FLEX",
+          "locator": {
+            "page": 27,
+            "table": "Appendix A, Table IX",
+            "row": "FLEX-036; 190R002",
+            "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+          },
+          "protocol": "Free droplet; no support fiber; MDCA quiescent chamber; visible-flame extinction"
+        }
+      ],
+      "passage_ids": [
+        "PASS-FLEX-036"
+      ]
+    }
+  ],
+  "passages": [
+    {
+      "id": "PASS-SAFFIRE-I-1",
+      "source_id": "SRC-SAFFIRE-I-V",
+      "title": "Saffire thin-fuel test I-1",
+      "text": "I-1: SIBAL fabric; oxygen 21%, pressure 100 kPa; concurrent flow 20 cm/s. Steady flame size 4 cm; maximum 6.2 cm. Duct height 46 cm.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "SAFFIRE-I-1"
+      ],
+      "locator": {
+        "page": 8,
+        "table": "Table 2",
+        "row": "I-1",
+        "label": "Thin-sample test conditions and flame size"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-SAFFIRE-II-5",
+      "source_id": "SRC-SAFFIRE-I-V",
+      "title": "Saffire thin-fuel test II-5",
+      "text": "II-5: SIBAL fabric; oxygen 21%, pressure 100 kPa; concurrent flow 20 cm/s. Steady flame size 4 cm; maximum 4 cm. Duct height 46 cm.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "SAFFIRE-II-5"
+      ],
+      "locator": {
+        "page": 8,
+        "table": "Table 2",
+        "row": "II-5",
+        "label": "Thin-sample test conditions and flame size"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-SAFFIRE-II-6",
+      "source_id": "SRC-SAFFIRE-I-V",
+      "title": "Saffire thin-fuel test II-6",
+      "text": "II-6: SIBAL fabric; oxygen 21%, pressure 100 kPa; concurrent flow 25 cm/s. Steady flame size 5 cm; maximum 5 cm. Duct height 46 cm.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "SAFFIRE-II-6"
+      ],
+      "locator": {
+        "page": 8,
+        "table": "Table 2",
+        "row": "II-6",
+        "label": "Thin-sample test conditions and flame size"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-SAFFIRE-III-1",
+      "source_id": "SRC-SAFFIRE-I-V",
+      "title": "Saffire thin-fuel test III-1",
+      "text": "III-1: SIBAL fabric; oxygen 21%, pressure 100 kPa; concurrent flow 25 cm/s. Steady flame size 5 cm; maximum 8.2 cm. Duct height 46 cm.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "SAFFIRE-III-1"
+      ],
+      "locator": {
+        "page": 8,
+        "table": "Table 2",
+        "row": "III-1",
+        "label": "Thin-sample test conditions and flame size"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-SAFFIRE-IV-1",
+      "source_id": "SRC-SAFFIRE-I-V",
+      "title": "Saffire thin-fuel test IV-1",
+      "text": "IV-1: SIBAL fabric; oxygen 22%, pressure 100 kPa; concurrent flow 20 cm/s. Steady flame size 8.5 cm; maximum 11 cm. Duct height 30 cm.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "SAFFIRE-IV-1"
+      ],
+      "locator": {
+        "page": 8,
+        "table": "Table 2",
+        "row": "IV-1",
+        "label": "Thin-sample test conditions and flame size"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-SAFFIRE-V-2",
+      "source_id": "SRC-SAFFIRE-I-V",
+      "title": "Saffire thin-fuel test V-2",
+      "text": "V-2: Cotton jersey; oxygen 26.2%, pressure 70.7 kPa; concurrent flow 20 cm/s. Steady flame size 10 cm; maximum 14 cm. Duct height 30 cm.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "SAFFIRE-V-2"
+      ],
+      "locator": {
+        "page": 8,
+        "table": "Table 2",
+        "row": "V-2",
+        "label": "Thin-sample test conditions and flame size"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-SAFFIRE-VI-2",
+      "source_id": "SRC-SAFFIRE-VI",
+      "title": "Saffire VI executed test VI-2",
+      "text": "VI-2 used SIBAL fabric, 31.0 mol% oxygen, 54.1 kPa and 20 cm/s concurrent flow in orbit. These preliminary executed conditions differ from lunar gravity.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "SAFFIRE-VI-2"
+      ],
+      "locator": {
+        "page": 11,
+        "table": "Test Matrix (as executed)",
+        "row": "VI-2",
+        "label": "Executed Saffire VI matrix"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-SAFFIRE-VI-3",
+      "source_id": "SRC-SAFFIRE-VI",
+      "title": "Saffire VI executed test VI-3",
+      "text": "VI-3 used PMMA, 30.3 mol% oxygen, 54.6 kPa and 20 cm/s concurrent flow in orbit. These preliminary executed conditions differ from lunar gravity.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "SAFFIRE-VI-3"
+      ],
+      "locator": {
+        "page": 11,
+        "table": "Test Matrix (as executed)",
+        "row": "VI-3",
+        "label": "Executed Saffire VI matrix"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-SAFFIRE-VI-4",
+      "source_id": "SRC-SAFFIRE-VI",
+      "title": "Saffire VI executed test VI-4",
+      "text": "VI-4 used PMMA, 28.8 mol% oxygen, 55.2 kPa and 20 cm/s concurrent flow in orbit. These preliminary executed conditions differ from lunar gravity.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "SAFFIRE-VI-4"
+      ],
+      "locator": {
+        "page": 11,
+        "table": "Test Matrix (as executed)",
+        "row": "VI-4",
+        "label": "Executed Saffire VI matrix"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-LUCI-FABRIC",
+      "source_id": "SRC-LUCI",
+      "title": "LUCI fabric source context",
+      "text": "LUCI fabric burned in air at normal pressure under centrifugal lunar-gravity simulation. Reported flame base spread rate: 0.92 mm/s. Gas composition changed during burning; forced airflow is not specified.",
+      "kind": "page_passage",
+      "lane": "prevention",
+      "run_ids": [
+        "LUCI-FABRIC"
+      ],
+      "locator": {
+        "page": 19,
+        "label": "LUCI measured flame propagation"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-LUCI-PMMA",
+      "source_id": "SRC-LUCI",
+      "title": "LUCI rod source context",
+      "text": "LUCI rod burned in air at normal pressure under centrifugal lunar-gravity simulation. Reported flame tip spread rate: 1.5 mm/s. Gas composition changed during burning; forced airflow is not specified.",
+      "kind": "page_passage",
+      "lane": "prevention",
+      "run_ids": [
+        "LUCI-PMMA"
+      ],
+      "locator": {
+        "page": 21,
+        "label": "LUCI measured flame propagation"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-SAME-KAPTON",
+      "source_id": "SRC-NIST-SAME-NEWS",
+      "title": "Material-dependent spacecraft detector response",
+      "text": "The ISS photoelectric detector frequently missed the smaller particles from overheated Kapton. This is a study-level observation, not an identifiable run; particle aging, heating and flow differed across tests.",
+      "kind": "page_passage",
+      "lane": "detection",
+      "run_ids": [
+        "SAME-KAPTON"
+      ],
+      "locator": {
+        "label": "NIST report, material-specific detector observations, May2018"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-SAME-TEFLON",
+      "source_id": "SRC-NIST-SAME-NEWS",
+      "title": "Material-dependent spacecraft detector response",
+      "text": "The ISS photoelectric detector frequently missed the smaller particles from overheated Teflon. This is a study-level observation, not an identifiable run; particle aging, heating and flow differed across tests.",
+      "kind": "page_passage",
+      "lane": "detection",
+      "run_ids": [
+        "SAME-TEFLON"
+      ],
+      "locator": {
+        "label": "NIST report, material-specific detector observations, May2018"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-SAME-LARGE-PARTICLES",
+      "source_id": "SRC-NIST-SAME-NEWS",
+      "title": "Material-dependent spacecraft detector response",
+      "text": "Larger smoke particles from cellulose, silicone and Pyrell were detected by the ISS light-scattering detector. This is a study-level observation, not an identifiable run; particle aging, heating and flow differed across tests.",
+      "kind": "page_passage",
+      "lane": "detection",
+      "run_ids": [
+        "SAME-LARGE-PARTICLES"
+      ],
+      "locator": {
+        "label": "NIST report, material-specific detector observations, May2018"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-FM2-PRESET",
+      "source_id": "SRC-FM2",
+      "title": "Illustrative lunar exploration atmosphere",
+      "text": "FM2 planned two atmospheres: 21% oxygen at 14.7 psia, and 34% oxygen at 8.2 psia. These design cases support the illustrative lunar preset; they are not completed lunar test results.",
+      "kind": "page_passage",
+      "lane": "prevention",
+      "run_ids": [],
+      "locator": {
+        "page": 1,
+        "label": "FM2 environmental control design cases"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-FLEX-SCOPE",
+      "source_id": "SRC-FLEX",
+      "title": "FLEX droplet-extinction scope",
+      "text": "FLEX used the MDCA apparatus in the ISS Combustion Integrated Rack. The technical report documents 284 tests, with nominal matrix conditions separated from individual droplet outcomes. No uninspected matrix row is promoted to a run.",
+      "kind": "abstract",
+      "lane": "suppression",
+      "run_ids": [],
+      "locator": {
+        "label": "NTRS publication abstract"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-LUNAR-LAB-SCOPE",
+      "source_id": "SRC-LUNAR-LAB",
+      "title": "Reduced-pressure lunar-gravity test limitations",
+      "text": "The study compares White Sands terrestrial testing and a Glenn drop-tower centrifuge. Differences in ignition, material geometry and gas velocity limit direct endpoint comparisons. Lunar buoyant velocity remains undetermined.",
+      "kind": "page_passage",
+      "lane": "prevention",
+      "run_ids": [],
+      "locator": {
+        "page": 9,
+        "label": "Cross-facility protocol differences and interpretation"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-BASS-II-B1",
+      "source_id": "SRC-BASS-II",
+      "title": "BASS-II B1 operator observation",
+      "text": "B1, as-run 7: 2 cm wide PMMA film, 100 micrometres thick; calibrated initial oxygen 22.2 vol%. Rapid ignition followed by extinction when flow was switched off; soot and a blue leading edge were noted.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "BASS-II-B1"
+      ],
+      "locator": {
+        "page": 111,
+        "table": "Appendix A, Table A.1",
+        "row": "B1; as-run 7; sample 147",
+        "label": "Bhattacharjee PMMA test matrix; printed page 103"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-BASS-II-B10",
+      "source_id": "SRC-BASS-II",
+      "title": "BASS-II B10 operator observation",
+      "text": "B10, as-run 62: 1 cm wide PMMA film, 200 micrometres thick; calibrated initial oxygen 21.0 vol%. Steady spread was examined at several flow settings; extinction occurred at fan potentiometer 0.35.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "BASS-II-B10"
+      ],
+      "locator": {
+        "page": 111,
+        "table": "Appendix A, Table A.1",
+        "row": "B10; as-run 62; sample 173m",
+        "label": "Bhattacharjee PMMA test matrix; printed page 103"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-BASS-II-B11",
+      "source_id": "SRC-BASS-II",
+      "title": "BASS-II B11 operator observation",
+      "text": "B11, as-run 61: 2 cm wide PMMA film, 200 micrometres thick; calibrated initial oxygen 21.0 vol%. Multiple flow settings were used for steady spread; extinction occurred at potentiometer 0.35.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "BASS-II-B11"
+      ],
+      "locator": {
+        "page": 111,
+        "table": "Appendix A, Table A.1",
+        "row": "B11; as-run 61; sample 158m",
+        "label": "Bhattacharjee PMMA test matrix; printed page 103"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-BASS-II-B12",
+      "source_id": "SRC-BASS-II",
+      "title": "BASS-II B12 operator observation",
+      "text": "B12, as-run 13: 2 cm wide PMMA film, 300 micrometres thick; calibrated initial oxygen 22.2 vol%. The flame was predominantly blue, with soot noted on the underside.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "BASS-II-B12"
+      ],
+      "locator": {
+        "page": 111,
+        "table": "Appendix A, Table A.1",
+        "row": "B12; as-run 13; sample 160",
+        "label": "Bhattacharjee PMMA test matrix; printed page 103"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-BASS-II-B13",
+      "source_id": "SRC-BASS-II",
+      "title": "BASS-II B13 operator observation",
+      "text": "B13, as-run 63: 2 cm wide PMMA film, 400 micrometres thick; calibrated initial oxygen 21.0 vol%. Steady spread was investigated at multiple flow settings, followed by extinction at potentiometer 0.35.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "BASS-II-B13"
+      ],
+      "locator": {
+        "page": 111,
+        "table": "Appendix A, Table A.1",
+        "row": "B13; as-run 63; sample 162m",
+        "label": "Bhattacharjee PMMA test matrix; printed page 103"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-BASS-II-B14",
+      "source_id": "SRC-BASS-II",
+      "title": "BASS-II B14 operator observation",
+      "text": "B14, as-run 47: 1 cm wide PMMA film, 200 micrometres thick; calibrated initial oxygen 15.0 vol%. Only brief ignition was observed before the flame extinguished.",
+      "kind": "table",
+      "lane": "prevention",
+      "run_ids": [
+        "BASS-II-B14"
+      ],
+      "locator": {
+        "page": 111,
+        "table": "Appendix A, Table A.1",
+        "row": "B14; as-run 47; sample 174m",
+        "label": "Bhattacharjee PMMA test matrix; printed page 103"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-LUNAR-LAB-PROTOCOL",
+      "source_id": "SRC-LUNAR-LAB",
+      "title": "Lunar low-pressure centrifugal test protocol",
+      "text": "The study targeted 56.5 kPa (8.2 psia). Glenn tests used a 20.4 RPM centrifuge during 5.2-second drops, producing nominal one-sixth-g radial acceleration. Oxygen limits varied by material; results depend on ignition and short-duration extinction protocols.",
+      "kind": "page_passage",
+      "lane": "prevention",
+      "run_ids": [
+        "LUNAR-LAB-PROTOCOL"
+      ],
+      "locator": {
+        "page": 7,
+        "label": "Section B, NASA Glenn partial-gravity testing"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-FLEX-002",
+      "source_id": "SRC-FLEX",
+      "title": "FLEX 002 visible-flame extinction",
+      "text": "FLEX-002 (20CAL10): Methanol, 21% oxygen by mole, 762 mmHg absolute pressure; initial droplet 1.86 mm; visible-flame extinction at 0.94 mm; burn time 5 s. Free droplet without a support fiber.",
+      "kind": "table",
+      "lane": "suppression",
+      "run_ids": [
+        "FLEX-002"
+      ],
+      "locator": {
+        "page": 26,
+        "table": "Appendix A, Table IX",
+        "row": "FLEX-002; 20CAL10",
+        "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-FLEX-003",
+      "source_id": "SRC-FLEX",
+      "title": "FLEX 003 visible-flame extinction",
+      "text": "FLEX-003 (20CAL12): Methanol, 21% oxygen by mole, 764.2 mmHg absolute pressure; initial droplet 1.61 mm; visible-flame extinction at 0.92 mm; burn time 3.2 s. Free droplet without a support fiber.",
+      "kind": "table",
+      "lane": "suppression",
+      "run_ids": [
+        "FLEX-003"
+      ],
+      "locator": {
+        "page": 26,
+        "table": "Appendix A, Table IX",
+        "row": "FLEX-003; 20CAL12",
+        "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-FLEX-005",
+      "source_id": "SRC-FLEX",
+      "title": "FLEX 005 visible-flame extinction",
+      "text": "FLEX-005 (30CAL03): Methanol, 21% oxygen by mole, 760 mmHg absolute pressure; initial droplet 1.92 mm; visible-flame extinction at 0.81 mm; burn time 6.34 s. Free droplet without a support fiber.",
+      "kind": "table",
+      "lane": "suppression",
+      "run_ids": [
+        "FLEX-005"
+      ],
+      "locator": {
+        "page": 26,
+        "table": "Appendix A, Table IX",
+        "row": "FLEX-005; 30CAL03",
+        "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-FLEX-006",
+      "source_id": "SRC-FLEX",
+      "title": "FLEX 006 visible-flame extinction",
+      "text": "FLEX-006 (40CAL01): Methanol, 21% oxygen by mole, 760 mmHg absolute pressure; initial droplet 2.54 mm; visible-flame extinction at 1.53 mm; burn time 9.6 s. Free droplet without a support fiber.",
+      "kind": "table",
+      "lane": "suppression",
+      "run_ids": [
+        "FLEX-006"
+      ],
+      "locator": {
+        "page": 26,
+        "table": "Appendix A, Table IX",
+        "row": "FLEX-006; 40CAL01",
+        "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-FLEX-035",
+      "source_id": "SRC-FLEX",
+      "title": "FLEX 035 visible-flame extinction",
+      "text": "FLEX-035 (181F001): Heptane, 21% oxygen by mole, 768.1 mmHg absolute pressure; initial droplet 3.85 mm; visible-flame extinction at 3.34 mm; burn time 8.9 s. Free droplet without a support fiber.",
+      "kind": "table",
+      "lane": "suppression",
+      "run_ids": [
+        "FLEX-035"
+      ],
+      "locator": {
+        "page": 27,
+        "table": "Appendix A, Table IX",
+        "row": "FLEX-035; 181F001",
+        "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-FLEX-036",
+      "source_id": "SRC-FLEX",
+      "title": "FLEX 036 visible-flame extinction",
+      "text": "FLEX-036 (190R002): Methanol, 20% oxygen by mole, 539 mmHg absolute pressure; initial droplet 2.4 mm; visible-flame extinction at 1.67 mm; burn time 7.1 s. Free droplet without a support fiber.",
+      "kind": "table",
+      "lane": "suppression",
+      "run_ids": [
+        "FLEX-036"
+      ],
+      "locator": {
+        "page": 27,
+        "table": "Appendix A, Table IX",
+        "row": "FLEX-036; 190R002",
+        "label": "Detailed droplet results; actual recorded pressure and initial diameter"
+      },
+      "review_status": "source_checked"
+    },
+    {
+      "id": "PASS-FLEX-ISS-PRESET",
+      "source_id": "SRC-FLEX",
+      "title": "FLEX cabin-air reference atmosphere",
+      "text": "Section 4.1 and Table I describe the engineering tests in ISS cabin air: nominal oxygen mole fraction 0.21, carbon dioxide mole fraction 0.005, balance nitrogen, at 1.0 atm. This nominal context supports the approximate ISS-like preset; individual test pressures are retained separately.",
+      "kind": "table",
+      "lane": "suppression",
+      "run_ids": [],
+      "locator": {
+        "page": 16,
+        "table": "Table I",
+        "label": "Cabin-air test matrix and nominal composition; see also PDF page 15"
+      },
+      "review_status": "source_checked"
+    }
+  ]
+}

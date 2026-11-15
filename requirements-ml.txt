@@ -1,0 +1,7 @@
+-r requirements.txt
+# Install torch first using the official CPU index; see scripts/bootstrap.ps1.
+torch==2.11.0+cpu
+transformers==5.22.1
+sentence-transformers==6.2.0
+safetensors>=0.6.2,<1
+
