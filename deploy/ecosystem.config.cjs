@@ -6,7 +6,7 @@ module.exports = {
     namespace: 'nasa-space-app',
     cwd: `${root}/current`,
     script: `${root}/.venv/bin/python`,
-    args: `-m uvicorn backend.main:app --host 0.0.0.0 --port 8097 --workers 1 --proxy-headers --forwarded-allow-ips=127.0.0.1 --limit-concurrency 64 --timeout-keep-alive 5 --env-file ${root}/shared/flameledger.env`,
+    args: `-m uvicorn backend.main:app --host 127.0.0.1 --port 8097 --workers 1 --proxy-headers --forwarded-allow-ips=127.0.0.1 --limit-concurrency 64 --timeout-keep-alive 5 --env-file ${root}/shared/flameledger.env`,
     interpreter: 'none',
     exec_mode: 'fork',
     instances: 1,

@@ -2,11 +2,12 @@
 
 An evidence research console for NASA's **Flame in Freefall** challenge, implemented from [the supplied plan](<FlameLedger_Implementation_Plan (1).md>). Given a proposed cabin environment, FlameLedger ranks relevant NASA/NIST combustion experiments, explains condition differences and missing fields, opens source records with PDF locators, compares two runs side-by-side, and exports a reproducible CSV ledger. The application works cleanly with an empty Gemini key via its deterministic evidence-only fallback.
 
+- **Team:** Qubit
 - **Repository:** https://github.com/Muhammad-Hassan12/FlameLedger
-- **Deployed VPS endpoint:** http://169.58.54.125:8097 (isolated PM2 daemon on port `8097`; DNS for `flameledger.agenticerastudio.tech` points to `169.58.54.125`, awaiting administrator Nginx/Certbot HTTPS setup).
-- **License:** [MIT License](LICENSE)
+- **Live Production URL:** **https://flameledger.agenticerastudio.tech** (HTTPS via Nginx + Let's Encrypt reverse proxy to isolated PM2 `nasa-space-app` on `127.0.0.1:8097`).
+- **License:** [Apache License 2.0](LICENSE)
 
-## Team
+## Team Qubit
 
 1. Syed Muhammad Hassan
 2. Owais Fayyaz

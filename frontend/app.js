@@ -218,10 +218,17 @@ $("#export").addEventListener("click",()=>downloadCSV());$("#export-comparison")
 $("#compare-left").addEventListener("change",loadComparison);$("#compare-right").addEventListener("change",loadComparison);
 $("#preview-coverage").addEventListener("change",()=>{state.cell=null;$("#clear-cell").hidden=true;renderCoverage();renderRuns();});
 $("#clear-cell").addEventListener("click",()=>{state.cell=null;$("#clear-cell").hidden=true;renderCoverage();renderRuns();});
+function wireDialog(dialogId,closeId,openerIds){
+  const dialog=$(dialogId);
+  for(const id of openerIds){const opener=$(id);if(opener)opener.addEventListener("click",()=>{state.trigger=opener;dialog.showModal();});}
+  $(closeId).addEventListener("click",()=>dialog.close());
+  dialog.addEventListener("close",()=>{state.trigger?.focus();});
+  dialog.addEventListener("click",event=>{if(event.target===dialog)dialog.close();});
+}
 $("#source-close").addEventListener("click",()=>$("#source-drawer").close());
 $("#source-drawer").addEventListener("close",()=>{state.trigger?.focus();});
-for(const id of ["#methods-open","#disclosure-open"])$(id).addEventListener("click",()=>$("#methods-dialog").showModal());
-$("#methods-close").addEventListener("click",()=>$("#methods-dialog").close());
+wireDialog("#methods-dialog","#methods-close",["#methods-open","#disclosure-open"]);
+wireDialog("#about-dialog","#about-close",["#about-open","#footer-about-open"]);
 $("#refresh-brief").addEventListener("click",loadBriefing);$("#search-form").addEventListener("submit",searchLiterature);
 $("#chamber-art").addEventListener("error",()=>$("#chamber-scene").classList.add("art-failed"));
 document.addEventListener("visibilitychange",()=>{if(document.hidden)$("#chamber-scene").classList.remove("animate");});
